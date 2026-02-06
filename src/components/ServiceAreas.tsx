@@ -1,4 +1,5 @@
-import { MapPin } from "lucide-react";
+import { MapPin, FileText } from "lucide-react";
+import ContactFormDialog from "./ContactFormDialog";
 
 const areas = [
   {
@@ -54,6 +55,17 @@ const ServiceAreas = () => {
         <p className="text-center text-muted-foreground mt-8 text-sm">
           Auch außerhalb dieser Gebiete? Sprechen Sie uns gerne an!
         </p>
+
+        <div className="flex justify-center mt-8">
+          <ContactFormDialog
+            trigger={
+              <button className="hero-cta-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105">
+                <FileText className="w-5 h-5" />
+                Angebot sichern
+              </button>
+            }
+          />
+        </div>
       </div>
     </section>
   );
