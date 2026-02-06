@@ -62,7 +62,7 @@ const Footer = () => {
           {/* Certificates */}
           <div className="col-span-2 md:col-span-1">
             <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Zertifizierungen</h4>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-start gap-3">
               <a 
                 href="https://www.energie-effizienz-experten.de" 
                 target="_blank" 
@@ -72,13 +72,13 @@ const Footer = () => {
                 <img
                   src={certEee}
                   alt="Energieeffizienz Experten für Förderprogramme des Bundes"
-                  className="h-10 md:h-12 w-auto object-contain"
+                  className="h-10 md:h-12 w-auto max-w-[180px] object-contain"
                 />
               </a>
               <img
                 src={certGih}
                 alt="GIH Bayern - Interessenvertretung für Energieberatende"
-                className="h-10 md:h-12 w-auto object-contain"
+                className="h-10 md:h-12 w-auto max-w-[180px] object-contain"
               />
             </div>
           </div>
