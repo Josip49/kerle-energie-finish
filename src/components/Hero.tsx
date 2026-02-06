@@ -33,7 +33,9 @@ const Hero = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl lg:text-2xl text-white/90 mb-3 md:mb-4">
-            Förderchaos? Technik-Frust? Wir bringen Ordnung rein.
+            <span className="block md:inline">Förderchaos?</span>
+            <span className="block md:inline md:ml-1">Technik-Frust?</span>
+            <span className="block md:inline md:ml-1">Wir bringen Ordnung rein.</span>
           </p>
 
           <p className="text-base md:text-lg text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto px-2">
