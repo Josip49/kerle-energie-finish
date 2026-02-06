@@ -286,6 +286,25 @@
     @apply bg-[hsl(142,70%,45%)] text-white hover:bg-[hsl(142,70%,40%)];
   }
 
+  /* Service Areas */
+  .service-area-card {
+    @apply bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border/50 text-center transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .service-area-card:hover {
+    @apply border-primary/30 -translate-y-1;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .service-area-icon {
+    @apply w-12 h-12 rounded-full bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center mx-auto mb-4 transition-all duration-300;
+  }
+
+  .service-area-card:hover .service-area-icon {
+    @apply bg-primary text-primary-foreground scale-110;
+  }
+
   /* Footer */
   .footer-section {
     @apply border-t border-border/50;
