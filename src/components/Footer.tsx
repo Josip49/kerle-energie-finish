@@ -4,6 +4,7 @@ import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
 import senovateLogo from "@/assets/senovate-logo.png";
+import { StefanKerling, KevinLeuschner, KerLeBrand } from "@/components/StyledName";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -46,11 +47,11 @@ const Footer = () => {
             <ul className="space-y-1.5 md:space-y-2 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>Stefan: <a href="tel:015140368889" className="hover:text-primary transition-colors">0151 40368889</a></span>
+                <span><StefanKerling />: <a href="tel:015140368889" className="hover:text-primary transition-colors">0151 40368889</a></span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>Kevin: <a href="tel:01623598287" className="hover:text-primary transition-colors">0162 3598287</a></span>
+                <span><KevinLeuschner />: <a href="tel:01623598287" className="hover:text-primary transition-colors">0162 3598287</a></span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 flex-shrink-0" />
@@ -88,7 +89,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border/50 flex flex-col items-center gap-4 md:gap-6">
           <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 text-xs md:text-sm">
             <p className="text-muted-foreground text-center">
-              © {currentYear} KerLe Energieberatung. Alle Rechte vorbehalten.
+              © {currentYear} <KerLeBrand /> Energieberatung. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-4 md:gap-6">
               <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">

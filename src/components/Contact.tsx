@@ -2,6 +2,7 @@ import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CallDialog from "@/components/CallDialog";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { StefanKerling, KevinLeuschner } from "@/components/StyledName";
 
 const Contact = () => {
   const isMobile = useIsMobile();
@@ -30,10 +31,10 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">Telefon</h3>
                   <p className="text-muted-foreground mb-1">
-                    Stefan: <a href="tel:015140368889" className="text-primary hover:underline">0151 40368889</a>
+                    <StefanKerling />: <a href="tel:015140368889" className="text-primary hover:underline">0151 40368889</a>
                   </p>
                   <p className="text-muted-foreground">
-                    Kevin: <a href="tel:01623598287" className="text-primary hover:underline">0162 3598287</a>
+                    <KevinLeuschner />: <a href="tel:01623598287" className="text-primary hover:underline">0162 3598287</a>
                   </p>
                   <p className="text-sm text-muted-foreground mt-1">
                     Kostenlose Erstberatung

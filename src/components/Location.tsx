@@ -1,4 +1,5 @@
 import { MapPin } from "lucide-react";
+import { KerLeBrand, StefanKerling, KevinLeuschner } from "@/components/StyledName";
 
 const Location = () => {
   return (
@@ -37,7 +38,7 @@ const Location = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-foreground mb-2">
-                  KerLe Energieberatung
+                  <KerLeBrand /> Energieberatung
                 </h3>
                 <p className="text-muted-foreground">
                   Ihre BAFA-zertifizierten Energie-Effizienz-Experten
@@ -65,8 +66,8 @@ const Location = () => {
               <div className="border-t border-border/50 pt-4">
                 <h4 className="font-semibold text-foreground mb-2">Kontakt</h4>
                 <div className="space-y-1 text-muted-foreground">
-                  <p>Stefan: <a href="tel:015140368889" className="text-primary hover:underline">0151 40368889</a></p>
-                  <p>Kevin: <a href="tel:01623598287" className="text-primary hover:underline">0162 3598287</a></p>
+                  <p><StefanKerling />: <a href="tel:015140368889" className="text-primary hover:underline">0151 40368889</a></p>
+                  <p><KevinLeuschner />: <a href="tel:01623598287" className="text-primary hover:underline">0162 3598287</a></p>
                   <p>
                     <a 
                       href="mailto:kerle@rothsee-energieberatung.de" 
