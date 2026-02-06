@@ -50,7 +50,7 @@ const Location = () => {
               <div className="border-t border-border/50 pt-4">
                 <h4 className="font-semibold text-foreground mb-2">Adresse</h4>
                 <p className="text-muted-foreground">
-                  Musterstraße 123<br />
+                  Lindenallee 33<br />
                   91161 Hilpoltstein
                 </p>
               </div>
