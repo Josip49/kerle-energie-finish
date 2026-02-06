@@ -78,27 +78,31 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} KerLe Energieberatung. Alle Rechte vorbehalten.
-          </p>
-          <div className="flex items-center gap-6 text-sm">
-            <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">
-              Impressum
-            </Link>
-            <Link to="/datenschutz" className="text-muted-foreground hover:text-primary transition-colors">
-              Datenschutz
-            </Link>
-            <a 
-              href="https://senovate.de" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors border-l border-border pl-6"
-            >
-              <span>Website by</span>
-              <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
-            </a>
+        <div className="pt-8 border-t border-border flex flex-col items-center gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm">
+            <p className="text-muted-foreground">
+              © {currentYear} KerLe Energieberatung. Alle Rechte vorbehalten.
+            </p>
+            <div className="flex items-center gap-6">
+              <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">
+                Impressum
+              </Link>
+              <Link to="/datenschutz" className="text-muted-foreground hover:text-primary transition-colors">
+                Datenschutz
+              </Link>
+            </div>
           </div>
+          
+          {/* Senovate Credit - Centered */}
+          <a 
+            href="https://senovate.de" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
+          >
+            <span>Erstellt von</span>
+            <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+          </a>
         </div>
       </div>
     </footer>
