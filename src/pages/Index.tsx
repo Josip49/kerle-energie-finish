@@ -6,6 +6,7 @@ import Services from "@/components/Services";
 import ServiceAreas from "@/components/ServiceAreas";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
+import Location from "@/components/Location";
 import Footer from "@/components/Footer";
 import WhatsAppButtons from "@/components/WhatsAppButtons";
 
@@ -20,6 +21,7 @@ const Index = () => {
       <Services />
       <FAQ />
       <Contact />
+      <Location />
       <Footer />
       <WhatsAppButtons />
     </div>
