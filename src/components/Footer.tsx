@@ -108,7 +108,7 @@ const Footer = () => {
             className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
           >
             <span>Erstellt von</span>
-            <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+            <img src={senovateLogo} alt="Senovate" className="h-8 w-auto" />
           </a>
         </div>
       </div>
