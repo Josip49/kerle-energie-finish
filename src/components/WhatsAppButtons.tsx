@@ -17,7 +17,7 @@ const WhatsAppButtons = () => {
         aria-label="E-Mail senden"
       >
         <div className="floating-button-inner email-inner">
-          <Mail className="w-5 h-5 text-white" />
+          <Mail className="w-4 h-4 md:w-5 md:h-5 text-white" />
         </div>
         <span className="floating-tooltip">
           E-Mail schreiben
@@ -35,7 +35,7 @@ const WhatsAppButtons = () => {
             aria-label="WhatsApp an Stefan"
           >
             <div className="floating-button-inner whatsapp-inner">
-              <MessageCircle className="w-5 h-5 text-white" />
+              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
             </div>
             <span className="floating-tooltip">
               Stefan per WhatsApp
@@ -50,7 +50,7 @@ const WhatsAppButtons = () => {
             aria-label="WhatsApp an Kevin"
           >
             <div className="floating-button-inner whatsapp-inner">
-              <MessageCircle className="w-5 h-5 text-white" />
+              <MessageCircle className="w-4 h-4 md:w-5 md:h-5 text-white" />
             </div>
             <span className="floating-tooltip">
               Kevin per WhatsApp
