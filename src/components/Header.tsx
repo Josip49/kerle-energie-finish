@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
+import senovateLogo from "@/assets/senovate-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +43,7 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Certificates - Desktop */}
+          {/* Certificates & Senovate Badge - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
             <img
               src={certEee}
@@ -54,6 +55,17 @@ const Header = () => {
               alt="GIH Bayern"
               className="h-8 w-auto"
             />
+            <div className="border-l border-border pl-4 ml-2">
+              <a 
+                href="https://senovate.de" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
+              >
+                <span>Made by</span>
+                <img src={senovateLogo} alt="Senovate" className="h-6 w-auto" />
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
