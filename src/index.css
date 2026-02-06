@@ -3,93 +3,95 @@
 @tailwind utilities;
 
 /* KerLe Energieberatung Design System
-   Theme: Forest Green Energy / Professional German SME
+   Theme: Warm Forest Green / Modern German SME
    Voice: Trustworthy, Clear, Professional, Approachable
 */
 
 @layer base {
   :root {
-    /* Core Colors - Forest Green Theme */
-    --background: 0 0% 100%;
-    --foreground: 150 10% 15%;
+    /* Core Colors - Warmer, easier on eyes */
+    --background: 40 20% 98%;
+    --foreground: 150 15% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 150 10% 15%;
+    --card: 40 25% 99%;
+    --card-foreground: 150 15% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 150 10% 15%;
+    --popover: 40 25% 99%;
+    --popover-foreground: 150 15% 15%;
 
     /* Primary: Deep Forest Green */
     --primary: 152 45% 28%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: Soft Sage */
-    --secondary: 145 20% 94%;
-    --secondary-foreground: 150 10% 15%;
+    /* Secondary: Warm Cream */
+    --secondary: 40 30% 95%;
+    --secondary-foreground: 150 15% 15%;
 
-    /* Muted: Warm Gray */
-    --muted: 150 10% 96%;
-    --muted-foreground: 150 10% 45%;
+    /* Muted: Warm Gray-Beige */
+    --muted: 40 20% 94%;
+    --muted-foreground: 150 10% 40%;
 
-    /* Accent: Fresh Leaf Green */
-    --accent: 142 50% 92%;
+    /* Accent: Fresh Leaf Green with warmth */
+    --accent: 145 35% 90%;
     --accent-foreground: 152 45% 25%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 90%;
-    --input: 150 15% 90%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
     --ring: 152 45% 28%;
 
     --radius: 0.75rem;
 
     /* Sidebar */
-    --sidebar-background: 150 10% 98%;
+    --sidebar-background: 40 20% 97%;
     --sidebar-foreground: 150 10% 30%;
     --sidebar-primary: 152 45% 28%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 145 20% 94%;
-    --sidebar-accent-foreground: 150 10% 15%;
-    --sidebar-border: 150 15% 90%;
+    --sidebar-accent: 40 30% 94%;
+    --sidebar-accent-foreground: 150 15% 15%;
+    --sidebar-border: 40 20% 88%;
     --sidebar-ring: 152 45% 28%;
 
     /* Custom: Energy Theme Extensions */
     --primary-glow: 142 60% 45%;
     --gradient-primary: linear-gradient(135deg, hsl(152 45% 28%) 0%, hsl(142 50% 35%) 100%);
-    --gradient-hero: linear-gradient(180deg, hsl(145 20% 97%) 0%, hsl(0 0% 100%) 100%);
-    --shadow-soft: 0 4px 20px -4px hsl(152 45% 28% / 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(150 10% 20% / 0.08);
-    --shadow-elevated: 0 12px 40px -12px hsl(152 45% 28% / 0.2);
+    --gradient-hero: linear-gradient(180deg, hsl(40 25% 97%) 0%, hsl(40 20% 99%) 100%);
+    --gradient-section: linear-gradient(180deg, hsl(40 20% 96%) 0%, hsl(40 25% 98%) 100%);
+    --gradient-section-alt: linear-gradient(180deg, hsl(145 25% 96%) 0%, hsl(40 20% 98%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(152 45% 28% / 0.12);
+    --shadow-card: 0 2px 16px -2px hsl(40 20% 30% / 0.08);
+    --shadow-elevated: 0 12px 40px -12px hsl(152 45% 28% / 0.18);
 
     /* WhatsApp Glassmorphism */
     --whatsapp-green: 142 70% 45%;
-    --glass-bg: hsl(0 0% 100% / 0.7);
-    --glass-border: hsl(0 0% 100% / 0.5);
-    --glass-shadow: 0 8px 32px hsl(142 70% 45% / 0.3);
+    --glass-bg: hsl(40 25% 99% / 0.85);
+    --glass-border: hsl(40 25% 95% / 0.6);
+    --glass-shadow: 0 8px 32px hsl(142 70% 45% / 0.25);
   }
 
   .dark {
     --background: 150 15% 8%;
-    --foreground: 145 15% 95%;
+    --foreground: 40 20% 95%;
 
     --card: 150 12% 12%;
-    --card-foreground: 145 15% 95%;
+    --card-foreground: 40 20% 95%;
 
     --popover: 150 12% 12%;
-    --popover-foreground: 145 15% 95%;
+    --popover-foreground: 40 20% 95%;
 
     --primary: 142 50% 50%;
     --primary-foreground: 150 15% 8%;
 
     --secondary: 150 12% 18%;
-    --secondary-foreground: 145 15% 95%;
+    --secondary-foreground: 40 20% 95%;
 
     --muted: 150 12% 18%;
-    --muted-foreground: 145 10% 60%;
+    --muted-foreground: 40 15% 60%;
 
     --accent: 150 12% 18%;
-    --accent-foreground: 145 15% 95%;
+    --accent-foreground: 40 20% 95%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
@@ -99,11 +101,11 @@
     --ring: 142 50% 50%;
 
     --sidebar-background: 150 12% 10%;
-    --sidebar-foreground: 145 15% 90%;
+    --sidebar-foreground: 40 20% 90%;
     --sidebar-primary: 142 50% 50%;
     --sidebar-primary-foreground: 150 15% 8%;
     --sidebar-accent: 150 12% 15%;
-    --sidebar-accent-foreground: 145 15% 95%;
+    --sidebar-accent-foreground: 40 20% 95%;
     --sidebar-border: 150 12% 18%;
     --sidebar-ring: 142 50% 50%;
   }
@@ -127,7 +129,8 @@
 @layer components {
   /* Header */
   .header-section {
-    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border;
+    @apply fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-border/50;
+    background: hsl(var(--background) / 0.92);
   }
 
   /* Hero Section */
@@ -137,7 +140,7 @@
   }
 
   .hero-gradient-orb {
-    @apply absolute rounded-full blur-3xl opacity-30 pointer-events-none;
+    @apply absolute rounded-full blur-3xl opacity-20 pointer-events-none;
   }
 
   .hero-gradient-orb-1 {
@@ -151,12 +154,21 @@
   }
 
   .hero-cta-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
     box-shadow: var(--shadow-elevated);
   }
 
   .hero-cta-secondary {
     @apply border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Section backgrounds */
+  .section-warm {
+    background: var(--gradient-section);
+  }
+
+  .section-green {
+    background: var(--gradient-section-alt);
   }
 
   /* Step Cards */
@@ -165,7 +177,7 @@
   }
 
   .step-card-inner {
-    @apply bg-card rounded-2xl p-6 lg:p-8 h-full flex flex-col border border-border transition-all duration-300;
+    @apply bg-card rounded-2xl p-6 lg:p-8 h-full flex flex-col border border-border/50 transition-all duration-300;
     box-shadow: var(--shadow-card);
   }
 
@@ -176,20 +188,22 @@
   }
 
   .step-number {
-    @apply text-6xl font-bold text-primary/10 absolute top-4 right-6;
+    @apply text-6xl font-bold absolute top-4 right-6;
+    color: hsl(var(--primary) / 0.08);
   }
 
   .step-icon {
-    @apply w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4;
+    @apply w-14 h-14 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center mb-4;
   }
 
   .step-connector {
-    @apply absolute top-1/2 -right-6 lg:-right-8 w-12 lg:w-16 h-0.5 bg-border;
+    @apply absolute top-1/2 -right-6 lg:-right-8 w-12 lg:w-16 h-0.5;
+    background: linear-gradient(90deg, hsl(var(--border)) 0%, hsl(var(--primary) / 0.3) 50%, hsl(var(--border)) 100%);
   }
 
   /* Benefit Cards */
   .benefit-card {
-    @apply bg-card rounded-xl p-6 border border-border transition-all duration-300;
+    @apply bg-card rounded-xl p-6 border border-border/50 transition-all duration-300;
     box-shadow: var(--shadow-card);
   }
 
@@ -200,12 +214,12 @@
   }
 
   .benefit-icon {
-    @apply w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4;
+    @apply w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center mb-4;
   }
 
   /* Service Cards */
   .service-card {
-    @apply bg-card rounded-xl p-6 lg:p-8 border border-border flex gap-4 transition-all duration-300;
+    @apply bg-card rounded-xl p-6 lg:p-8 border border-border/50 flex gap-4 transition-all duration-300;
     box-shadow: var(--shadow-card);
   }
 
@@ -215,21 +229,22 @@
   }
 
   .service-icon {
-    @apply w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0;
+    @apply w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center flex-shrink-0;
   }
 
   /* Service Cards with Background Images */
   .service-card-with-image {
-    @apply border border-border/20 transition-all duration-300;
+    @apply border border-border/20 transition-all duration-500;
     box-shadow: var(--shadow-card);
   }
 
   .service-card-with-image:hover {
     box-shadow: var(--shadow-elevated);
+    transform: translateY(-4px);
   }
 
   .service-icon-light {
-    @apply w-12 h-12 rounded-lg bg-white/20 backdrop-blur-sm text-white flex items-center justify-center flex-shrink-0;
+    @apply w-12 h-12 rounded-xl bg-white/15 backdrop-blur-sm text-white flex items-center justify-center flex-shrink-0;
   }
 
   /* Testimonial Cards */
@@ -245,7 +260,7 @@
 
   /* FAQ */
   .faq-item {
-    @apply bg-card rounded-xl border border-border overflow-hidden;
+    @apply bg-card rounded-xl border border-border/50 overflow-hidden;
     box-shadow: var(--shadow-card);
   }
 
@@ -259,11 +274,12 @@
 
   /* Contact */
   .contact-icon {
-    @apply w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0;
+    @apply w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center flex-shrink-0;
   }
 
   .contact-cta-block {
-    @apply bg-muted/50 rounded-2xl p-8 border border-border;
+    @apply bg-gradient-to-br from-card to-secondary/50 rounded-2xl p-8 border border-border/50;
+    box-shadow: var(--shadow-card);
   }
 
   .whatsapp-cta {
@@ -272,7 +288,8 @@
 
   /* Footer */
   .footer-section {
-    @apply bg-muted/50 border-t border-border;
+    @apply border-t border-border/50;
+    background: var(--gradient-section);
   }
 
   /* Floating Buttons Container */
@@ -285,9 +302,9 @@
   }
 
   .floating-button-inner {
-    @apply w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    @apply w-14 h-14 rounded-full flex items-center justify-center transition-all duration-300;
     backdrop-filter: blur(8px);
-    border: 1px solid hsl(0 0% 100% / 0.2);
+    border: 1px solid hsl(0 0% 100% / 0.25);
   }
 
   .whatsapp-inner {

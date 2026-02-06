@@ -11,10 +11,10 @@ const Footer = () => {
 
   return (
     <footer className="footer-section">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 py-10 md:py-12">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
           {/* Brand */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <Link to="/" className="inline-block mb-4">
               <img
                 src={logo}
@@ -30,8 +30,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Navigation</h4>
+            <ul className="space-y-1.5 md:space-y-2 text-sm">
               <li><a href="/#ablauf" className="text-muted-foreground hover:text-primary transition-colors">Ablauf</a></li>
               <li><a href="/#leistungen" className="text-muted-foreground hover:text-primary transition-colors">Leistungen</a></li>
               <li><a href="/#vorteile" className="text-muted-foreground hover:text-primary transition-colors">Vorteile</a></li>
@@ -41,28 +41,28 @@ const Footer = () => {
           </div>
 
           {/* Contact */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Kontakt</h4>
-            <ul className="space-y-2 text-sm">
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Kontakt</h4>
+            <ul className="space-y-1.5 md:space-y-2 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>Stefan: <a href="tel:015140368889" className="hover:text-primary transition-colors">0151 40368889</a></span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>Kevin: <a href="tel:01623598287" className="hover:text-primary transition-colors">0162 3598287</a></span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Mail className="w-4 h-4" />
-                <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`} className="hover:text-primary transition-colors">kerle@rothsee-energieberatung.de</a>
+                <Mail className="w-4 h-4 flex-shrink-0" />
+                <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`} className="hover:text-primary transition-colors break-all">kerle@rothsee-energieberatung.de</a>
               </li>
             </ul>
           </div>
 
           {/* Certificates */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-4">Zertifizierungen</h4>
-            <div className="flex flex-col gap-4">
+          <div className="col-span-2 md:col-span-1">
+            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Zertifizierungen</h4>
+            <div className="flex md:flex-col gap-4">
               <a 
                 href="https://www.energie-effizienz-experten.de" 
                 target="_blank" 
@@ -72,25 +72,25 @@ const Footer = () => {
                 <img
                   src={certEee}
                   alt="Energieeffizienz Experten für Förderprogramme des Bundes"
-                  className="h-12 w-auto object-contain object-left"
+                  className="h-10 md:h-12 w-auto object-contain"
                 />
               </a>
               <img
                 src={certGih}
                 alt="GIH Bayern - Interessenvertretung für Energieberatende"
-                className="h-12 w-auto object-contain object-left"
+                className="h-10 md:h-12 w-auto object-contain"
               />
             </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-border flex flex-col items-center gap-6">
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 text-sm">
-            <p className="text-muted-foreground">
+        <div className="pt-6 md:pt-8 border-t border-border/50 flex flex-col items-center gap-4 md:gap-6">
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 text-xs md:text-sm">
+            <p className="text-muted-foreground text-center">
               © {currentYear} KerLe Energieberatung. Alle Rechte vorbehalten.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 md:gap-6">
               <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">
                 Impressum
               </Link>
@@ -108,7 +108,7 @@ const Footer = () => {
             className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
           >
             <span>Erstellt von</span>
-            <img src={senovateLogo} alt="Senovate" className="h-8 w-auto" />
+            <img src={senovateLogo} alt="Senovate" className="h-7 md:h-8 w-auto" />
           </a>
         </div>
       </div>

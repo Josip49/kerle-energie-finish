@@ -8,7 +8,7 @@ const Contact = () => {
   const emailSubject = encodeURIComponent("Kundenanfrage (Grund)");
 
   return (
-    <section id="kontakt" className="py-20 lg:py-32">
+    <section id="kontakt" className="py-16 md:py-20 lg:py-32 section-green">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
