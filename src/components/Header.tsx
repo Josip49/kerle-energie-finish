@@ -45,11 +45,18 @@ const Header = () => {
 
           {/* Certificates - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <img
-              src={certEee}
-              alt="Energieeffizienz Experten"
-              className="h-8 w-auto"
-            />
+            <a 
+              href="https://www.energie-effizienz-experten.de" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
+              <img
+                src={certEee}
+                alt="Energieeffizienz Experten"
+                className="h-8 w-auto"
+              />
+            </a>
             <img
               src={certGih}
               alt="GIH Bayern"
@@ -89,11 +96,18 @@ const Header = () => {
             </ul>
             {/* Certificates - Mobile */}
             <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border">
-              <img
-                src={certEee}
-                alt="Energieeffizienz Experten"
-                className="h-6 w-auto"
-              />
+              <a 
+                href="https://www.energie-effizienz-experten.de" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src={certEee}
+                  alt="Energieeffizienz Experten"
+                  className="h-6 w-auto"
+                />
+              </a>
               <img
                 src={certGih}
                 alt="GIH Bayern"

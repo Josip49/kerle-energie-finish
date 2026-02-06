@@ -63,11 +63,18 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Zertifizierungen</h4>
             <div className="flex flex-col gap-4">
-              <img
-                src={certEee}
-                alt="Energieeffizienz Experten für Förderprogramme des Bundes"
-                className="h-12 w-auto object-contain object-left"
-              />
+              <a 
+                href="https://www.energie-effizienz-experten.de" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:opacity-80 transition-opacity"
+              >
+                <img
+                  src={certEee}
+                  alt="Energieeffizienz Experten für Förderprogramme des Bundes"
+                  className="h-12 w-auto object-contain object-left"
+                />
+              </a>
               <img
                 src={certGih}
                 alt="GIH Bayern - Interessenvertretung für Energieberatende"
