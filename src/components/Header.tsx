@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
+import ContactFormDialog from "./ContactFormDialog";
 
 
 const Header = () => {
@@ -43,8 +44,16 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Certificates - Desktop */}
+          {/* CTA Button & Certificates - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
+            <ContactFormDialog
+              trigger={
+                <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
+                  <FileText className="w-4 h-4" />
+                  Angebot sichern
+                </button>
+              }
+            />
             <a 
               href="https://www.energie-effizienz-experten.de" 
               target="_blank" 
@@ -94,6 +103,17 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            {/* CTA Button - Mobile */}
+            <div className="mt-4 pt-4 border-t border-border">
+              <ContactFormDialog
+                trigger={
+                  <button className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
+                    <FileText className="w-4 h-4" />
+                    Angebot sichern
+                  </button>
+                }
+              />
+            </div>
             {/* Certificates - Mobile */}
             <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border">
               <a 
