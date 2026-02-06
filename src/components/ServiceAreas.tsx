@@ -1,4 +1,5 @@
-import { MapPin } from "lucide-react";
+import { MapPin, ThermometerSun } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const areas = [
   {
@@ -54,6 +55,20 @@ const ServiceAreas = () => {
         <p className="text-center text-muted-foreground mt-8 text-sm">
           Auch außerhalb dieser Gebiete? Sprechen Sie uns gerne an!
         </p>
+
+        {/* CTA Button */}
+        <div className="text-center mt-10">
+          <Button size="lg" className="hero-cta-primary" asChild>
+            <a 
+              href="https://check.autarc.energy/kerle_energieberatung_gbr/wrmepumpencheck/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <ThermometerSun className="w-5 h-5 mr-2" />
+              Online Wärmepumpen Check
+            </a>
+          </Button>
+        </div>
       </div>
     </section>
   );
