@@ -1,6 +1,7 @@
-import { Phone, Mail, ArrowRight } from "lucide-react";
+import { Phone, Mail, ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CallDialog from "@/components/CallDialog";
+import ContactFormDialog from "@/components/ContactFormDialog";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -50,21 +51,14 @@ const Hero = () => {
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
-            <CallDialog className="hero-cta-primary">
+            <ContactFormDialog className="hero-cta-primary">
+              <FileText className="w-5 h-5 mr-2" />
+              Angebot sichern
+            </ContactFormDialog>
+            <CallDialog className="border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-foreground" variant="outline">
               <Phone className="w-5 h-5 mr-2" />
               Jetzt kostenlos anrufen
             </CallDialog>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-foreground"
-              asChild
-            >
-              <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`}>
-                <Mail className="w-5 h-5 mr-2" />
-                E-Mail schreiben
-              </a>
-            </Button>
           </div>
 
           {/* Scroll Indicator */}
