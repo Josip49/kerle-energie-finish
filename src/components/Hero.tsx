@@ -52,7 +52,12 @@ const Hero = () => {
               <Phone className="w-5 h-5 mr-2" />
               Jetzt kostenlos anrufen
             </CallDialog>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-foreground" asChild>
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-foreground"
+              asChild
+            >
               <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`}>
                 <Mail className="w-5 h-5 mr-2" />
                 E-Mail schreiben
