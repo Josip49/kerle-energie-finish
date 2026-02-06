@@ -1,5 +1,5 @@
 import { Shield, Clock, Euro, Award, HeartHandshake, Leaf } from "lucide-react";
-
+import { KerLeBrand } from "@/components/StyledName";
 const benefits = [
   {
     icon: Award,
@@ -39,7 +39,7 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Warum KerLe?
+            Warum <KerLeBrand />?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Klarheit statt Bauchgefühl – das ist unser Versprechen an Sie.
