@@ -3,6 +3,7 @@ import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
+import senovateLogo from "@/assets/senovate-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -81,13 +82,22 @@ const Footer = () => {
           <p className="text-sm text-muted-foreground">
             © {currentYear} KerLe Energieberatung. Alle Rechte vorbehalten.
           </p>
-          <div className="flex gap-6 text-sm">
+          <div className="flex items-center gap-6 text-sm">
             <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">
               Impressum
             </Link>
             <Link to="/datenschutz" className="text-muted-foreground hover:text-primary transition-colors">
               Datenschutz
             </Link>
+            <a 
+              href="https://senovate.de" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors border-l border-border pl-6"
+            >
+              <span>Website by</span>
+              <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+            </a>
           </div>
         </div>
       </div>
