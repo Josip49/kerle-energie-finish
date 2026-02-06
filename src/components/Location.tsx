@@ -18,14 +18,14 @@ const Location = () => {
           {/* Map */}
           <div className="rounded-2xl overflow-hidden shadow-lg border border-border/50 h-[400px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.123456789!2d11.1234567!3d49.1234567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDA3JzI0LjQiTiAxMcKwMDcnMjQuNCJF!5e0!3m2!1sde!2sde!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.8!2d11.1897!3d49.1883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f5e8c8c8c8c8c%3A0x0!2sLindenallee%2033%2C%2091161%20Hilpoltstein!5e0!3m2!1sde!2sde!4v1700000000000"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="KerLe Energieberatung Standort"
+              title="KerLe Energieberatung Standort - Lindenallee 33, 91161 Hilpoltstein"
               className="w-full h-full"
             />
           </div>
