@@ -62,11 +62,12 @@ const baujahrOptionen = [
 ];
 
 interface ContactFormDialogProps {
-  children: ReactNode;
+  children?: ReactNode;
+  trigger?: ReactNode;
   className?: string;
 }
 
-const ContactFormDialog = ({ children, className }: ContactFormDialogProps) => {
+const ContactFormDialog = ({ children, trigger, className }: ContactFormDialogProps) => {
   const [open, setOpen] = useState(false);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [selectedAnfragen, setSelectedAnfragen] = useState<string[]>([]);
@@ -150,9 +151,11 @@ ${selectedFiles.length > 0 ? `Hinweis: ${selectedFiles.length} Datei(en) wurden 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button size="lg" className={className}>
-          {children}
-        </Button>
+        {trigger ? trigger : (
+          <Button size="lg" className={className}>
+            {children}
+          </Button>
+        )}
       </DialogTrigger>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
