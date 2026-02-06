@@ -2,95 +2,110 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* KerLe Energieberatung Design System
+   Theme: Forest Green Energy / Professional German SME
+   Voice: Trustworthy, Clear, Professional, Approachable
 */
 
 @layer base {
   :root {
+    /* Core Colors - Forest Green Theme */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 150 10% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 150 10% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 150 10% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary: Deep Forest Green */
+    --primary: 152 45% 28%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary: Soft Sage */
+    --secondary: 145 20% 94%;
+    --secondary-foreground: 150 10% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted: Warm Gray */
+    --muted: 150 10% 96%;
+    --muted-foreground: 150 10% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent: Fresh Leaf Green */
+    --accent: 142 50% 92%;
+    --accent-foreground: 152 45% 25%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 152 45% 28%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Sidebar */
+    --sidebar-background: 150 10% 98%;
+    --sidebar-foreground: 150 10% 30%;
+    --sidebar-primary: 152 45% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 145 20% 94%;
+    --sidebar-accent-foreground: 150 10% 15%;
+    --sidebar-border: 150 15% 90%;
+    --sidebar-ring: 152 45% 28%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Custom: Energy Theme Extensions */
+    --primary-glow: 142 60% 45%;
+    --gradient-primary: linear-gradient(135deg, hsl(152 45% 28%) 0%, hsl(142 50% 35%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(145 20% 97%) 0%, hsl(0 0% 100%) 100%);
+    --shadow-soft: 0 4px 20px -4px hsl(152 45% 28% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(150 10% 20% / 0.08);
+    --shadow-elevated: 0 12px 40px -12px hsl(152 45% 28% / 0.2);
 
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* WhatsApp Glassmorphism */
+    --whatsapp-green: 142 70% 45%;
+    --glass-bg: hsl(0 0% 100% / 0.7);
+    --glass-border: hsl(0 0% 100% / 0.5);
+    --glass-shadow: 0 8px 32px hsl(142 70% 45% / 0.3);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 150 15% 8%;
+    --foreground: 145 15% 95%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 150 12% 12%;
+    --card-foreground: 145 15% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 150 12% 12%;
+    --popover-foreground: 145 15% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 142 50% 50%;
+    --primary-foreground: 150 15% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 12% 18%;
+    --secondary-foreground: 145 15% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 150 12% 18%;
+    --muted-foreground: 145 10% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 150 12% 18%;
+    --accent-foreground: 145 15% 95%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 150 12% 20%;
+    --input: 150 12% 20%;
+    --ring: 142 50% 50%;
+
+    --sidebar-background: 150 12% 10%;
+    --sidebar-foreground: 145 15% 90%;
+    --sidebar-primary: 142 50% 50%;
+    --sidebar-primary-foreground: 150 15% 8%;
+    --sidebar-accent: 150 12% 15%;
+    --sidebar-accent-foreground: 145 15% 95%;
+    --sidebar-border: 150 12% 18%;
+    --sidebar-ring: 142 50% 50%;
   }
 }
 
@@ -100,6 +115,252 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Header */
+  .header-section {
+    @apply fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    @apply relative overflow-hidden pt-20;
+    background: var(--gradient-hero);
+  }
+
+  .hero-gradient-orb {
+    @apply absolute rounded-full blur-3xl opacity-30 pointer-events-none;
+  }
+
+  .hero-gradient-orb-1 {
+    @apply w-96 h-96 -top-48 -right-48;
+    background: hsl(var(--primary));
+  }
+
+  .hero-gradient-orb-2 {
+    @apply w-64 h-64 bottom-0 left-1/4;
+    background: hsl(var(--primary-glow));
+  }
+
+  .hero-cta-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg;
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .hero-cta-secondary {
+    @apply border-primary text-primary hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Step Cards */
+  .step-card {
+    @apply relative;
+  }
+
+  .step-card-inner {
+    @apply bg-card rounded-2xl p-6 lg:p-8 h-full flex flex-col border border-border transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .step-card:hover .step-card-inner {
+    @apply border-primary/30;
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-4px);
+  }
+
+  .step-number {
+    @apply text-6xl font-bold text-primary/10 absolute top-4 right-6;
+  }
+
+  .step-icon {
+    @apply w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4;
+  }
+
+  .step-connector {
+    @apply absolute top-1/2 -right-6 lg:-right-8 w-12 lg:w-16 h-0.5 bg-border;
+  }
+
+  /* Benefit Cards */
+  .benefit-card {
+    @apply bg-card rounded-xl p-6 border border-border transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .benefit-card:hover {
+    @apply border-primary/30;
+    box-shadow: var(--shadow-soft);
+    transform: translateY(-2px);
+  }
+
+  .benefit-icon {
+    @apply w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4;
+  }
+
+  /* Service Cards */
+  .service-card {
+    @apply bg-card rounded-xl p-6 lg:p-8 border border-border flex gap-4 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .service-card:hover {
+    @apply border-primary/30;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .service-icon {
+    @apply w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0;
+  }
+
+  /* Service Cards with Background Images */
+  .service-card-with-image {
+    @apply border border-border/20 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+
+  .service-card-with-image:hover {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .service-icon-light {
+    @apply w-12 h-12 rounded-lg bg-white/20 backdrop-blur-sm text-white flex items-center justify-center flex-shrink-0;
+  }
+
+  /* Testimonial Cards */
+  .testimonial-card {
+    @apply bg-card rounded-xl p-6 border border-border;
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Trust Badges */
+  .trust-badge {
+    @apply flex flex-col items-center gap-1 px-6;
+  }
+
+  /* FAQ */
+  .faq-item {
+    @apply bg-card rounded-xl border border-border overflow-hidden;
+    box-shadow: var(--shadow-card);
+  }
+
+  .faq-trigger {
+    @apply px-6 py-4 text-left font-medium hover:text-primary transition-colors;
+  }
+
+  .faq-content {
+    @apply px-6 pb-4 text-muted-foreground;
+  }
+
+  /* Contact */
+  .contact-icon {
+    @apply w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center flex-shrink-0;
+  }
+
+  .contact-cta-block {
+    @apply bg-muted/50 rounded-2xl p-8 border border-border;
+  }
+
+  .whatsapp-cta {
+    @apply bg-[hsl(142,70%,45%)] text-white hover:bg-[hsl(142,70%,40%)];
+  }
+
+  /* Footer */
+  .footer-section {
+    @apply bg-muted/50 border-t border-border;
+  }
+
+  /* Floating Buttons Container */
+  .whatsapp-buttons-container {
+    @apply fixed bottom-6 right-6 z-50 flex flex-col gap-3;
+  }
+
+  .floating-button {
+    @apply flex items-center gap-3;
+  }
+
+  .floating-button-inner {
+    @apply w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300;
+    backdrop-filter: blur(8px);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+
+  .whatsapp-inner {
+    background: linear-gradient(135deg, hsl(142 70% 45%) 0%, hsl(142 60% 40%) 100%);
+    box-shadow:
+      0 8px 32px hsl(142 70% 45% / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2),
+      inset 0 -1px 0 hsl(142 70% 30% / 0.3);
+  }
+
+  .email-inner {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(152 45% 35%) 100%);
+    box-shadow:
+      0 8px 32px hsl(var(--primary) / 0.4),
+      inset 0 1px 0 hsl(0 0% 100% / 0.2),
+      inset 0 -1px 0 hsl(152 45% 20% / 0.3);
+  }
+
+  .floating-button:hover .floating-button-inner {
+    transform: scale(1.1);
+  }
+
+  .floating-button:hover .whatsapp-inner {
+    box-shadow:
+      0 12px 40px hsl(142 70% 45% / 0.5),
+      inset 0 1px 0 hsl(0 0% 100% / 0.3),
+      inset 0 -1px 0 hsl(142 70% 30% / 0.3);
+  }
+
+  .floating-button:hover .email-inner {
+    box-shadow:
+      0 12px 40px hsl(var(--primary) / 0.5),
+      inset 0 1px 0 hsl(0 0% 100% / 0.3),
+      inset 0 -1px 0 hsl(152 45% 20% / 0.3);
+  }
+
+  .floating-tooltip {
+    @apply absolute right-14 px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap opacity-0 pointer-events-none transition-all duration-300 translate-x-2;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-card);
+    color: hsl(var(--foreground));
+  }
+
+  .floating-button:hover .floating-tooltip {
+    @apply opacity-100 translate-x-0;
+  }
+
+  /* Prose styling for legal pages */
+  .prose h2 {
+    @apply mt-8 mb-4;
+  }
+
+  .prose h3 {
+    @apply mt-6 mb-3;
+  }
+
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose a {
+    @apply text-primary hover:underline;
+  }
+}
+
+/* Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
 }
