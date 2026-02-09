@@ -157,7 +157,8 @@ const Services = () => {
                   href={service.externalLink.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute top-4 right-4 z-20 px-3 py-2 bg-primary text-primary-foreground text-xs font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:scale-105"
+                  onClick={(e) => e.stopPropagation()}
+                  className="absolute bottom-4 right-4 z-20 px-3 py-2 bg-primary text-primary-foreground text-xs font-semibold rounded-lg hover:bg-primary/90 transition-all shadow-lg hover:scale-105"
                 >
                   {service.externalLink.label}
                 </a>
