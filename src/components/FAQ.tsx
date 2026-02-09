@@ -8,27 +8,71 @@ import {
 const faqs = [
   {
     question: "Was kostet eine Energieberatung?",
-    answer: "Die Kosten hängen vom Umfang ab. Wichtig: Die telefonische Erstberatung ist 100% kostenlos. Für geförderte Beratungen (iSFP, Baubegleitung) übernimmt die BAFA bis zu 80% der Kosten. Genaue Preise nennen wir Ihnen gerne im persönlichen Gespräch."
+    answer: "Die Kosten hängen vom Gebäude (Größe, Zustand, Baujahr) und vom gewünschten Umfang ab (z. B. iSFP, Einzelmaßnahmen, Förderanträge). Nach einem kurzen Erstgespräch nennen wir dir einen transparenten Festpreis – und zeigen dir, welche Teile davon förderfähig sind."
+  },
+  {
+    question: "Wie läuft die Energieberatung bei Ihnen ab?",
+    answer: "Typischer Ablauf: 1) Kostenloses Erstgespräch (Ziele & Rahmen klären), 2) Unterlagen-Check (was vorhanden ist, was wir noch brauchen), 3) Vor-Ort-Termin zur Gebäudeaufnahme, 4) Auswertung & Maßnahmenplan (inkl. Prioritäten), 5) Ergebnisgespräch + nächste Schritte. Auf Wunsch: Förderantragstellung + Begleitung bis zur Umsetzung."
   },
   {
     question: "Wie lange dauert die Bearbeitung?",
-    answer: "Bei KerLe erhalten Sie Ihren Sanierungsfahrplan oder Ihr Gutachten innerhalb von 7 Tagen nach der Vor-Ort-Begehung. So können Sie schnell mit der Planung starten."
+    answer: "Das hängt von Umfang und Auslastung ab. In der Regel dauert es von Erstgespräch bis fertigem Ergebnis einige Wochen. Den realistischen Zeitplan bekommst du direkt nach dem Erstgespräch."
+  },
+  {
+    question: "Was ist ein iSFP (individueller Sanierungsfahrplan)?",
+    answer: "Der iSFP ist ein strukturierter Sanierungsplan, der dein Gebäude Schritt für Schritt betrachtet: Welche Maßnahmen sind sinnvoll, in welcher Reihenfolge und mit welchen Effekten. Er hilft dir, Entscheidungen sauber zu treffen – und kann je nach Programm zusätzliche Fördervorteile bringen."
+  },
+  {
+    question: "Bieten Sie iSFP an?",
+    answer: "Ja. Wir erstellen den iSFP inklusive Vor-Ort-Aufnahme, Auswertung und verständlicher Ergebnisbesprechung."
   },
   {
     question: "Was bedeutet EEE/BAFA-zertifiziert?",
-    answer: "Als Energie-Effizienz-Experten (EEE) sind wir offiziell bei der Deutschen Energie-Agentur (dena) gelistet. Nur mit einem zertifizierten Experten erhalten Sie BAFA- und BEG-Fördermittel."
+    answer: 'EEE steht für „Energieeffizienz-Experte" (gelistet in der offiziellen Expertenliste). BAFA-zertifiziert bedeutet, dass wir für bestimmte Förderprogramme zugelassen sind und die notwendigen Nachweise fachlich korrekt erstellen dürfen.'
   },
   {
     question: "Welche Förderungen gibt es?",
-    answer: "Die wichtigsten Programme sind BAFA (Bundesförderung für effiziente Gebäude – Einzelmaßnahmen) und KfW (Kredite und Zuschüsse). Mit einem iSFP erhalten Sie zusätzlich 5% Bonus auf alle Maßnahmen. Wir beraten Sie, welches Programm für Sie optimal ist."
+    answer: "Das hängt vom Vorhaben ab (z. B. Heizungstausch, Dämmung, Fenster, Lüftung, ganzheitliche Sanierung). Wir prüfen, welche Förderprogramme in deinem Fall passen, welche Voraussetzungen gelten und welche Kombination sinnvoll ist."
   },
   {
-    question: "Muss ich mich für eine Maßnahme entscheiden?",
-    answer: "Nein. Wir beraten ergebnisoffen und sagen ehrlich, wenn eine Maßnahme sich wirtschaftlich nicht rechnet. Klarheit statt Bauchgefühl – das ist unser Anspruch."
+    question: "Übernehmen Sie die Förderanträge?",
+    answer: "Ja. Wir begleiten die Förderthemen aktiv – von der Auswahl des passenden Programms über die Antragstellung bis zu den erforderlichen Nachweisen im Verlauf. Wichtig: Viele Förderungen müssen vor Auftragserteilung bzw. Maßnahmenbeginn beantragt werden – deshalb ist das Timing entscheidend."
   },
   {
-    question: "Arbeiten Sie auch mit Handwerkern zusammen?",
-    answer: "Ja, auf Wunsch koordinieren wir die Umsetzung und begleiten den Bau. So stellen wir sicher, dass die Maßnahmen förderfähig bleiben und fachgerecht ausgeführt werden."
+    question: "Muss ich mich direkt für eine Maßnahme entscheiden?",
+    answer: "Nein. Du bekommst zuerst Klarheit und eine sinnvolle Priorisierung. Du entscheidest danach in Ruhe, ob du Schritt für Schritt umsetzt oder ein größeres Paket planst."
+  },
+  {
+    question: "Vor Ort oder geht das auch online?",
+    answer: "Eine seriöse Energieberatung basiert in den meisten Fällen auf einer Vor-Ort-Aufnahme. Bestimmte Vorabklärungen können digital erfolgen – die finale Bewertung machen wir aber sauber am Objekt."
+  },
+  {
+    question: "Welche Unterlagen brauche ich?",
+    answer: "Wenn vorhanden: Grundrisse, Baujahr, Angaben zur Heizung, Energie-/Heizkostenabrechnungen, ggf. Fotos und Rechnungen früherer Sanierungen. Wenn du nichts davon hast: kein Problem – wir sagen dir genau, was wirklich nötig ist und wie du es bekommst."
+  },
+  {
+    question: "Was bekomme ich am Ende konkret?",
+    answer: "Du erhältst eine klare Auswertung mit: konkreten Empfehlungen, sinnvoller Reihenfolge der Maßnahmen, grober Kosten-/Nutzen-Einschätzung, Förder-Hinweisen und nächsten Schritten. Je nach Auftrag zusätzlich den iSFP und/oder Unterlagen für die Förderung."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Energieberatung und Energieausweis?",
+    answer: "Ein Energieausweis ist eine standardisierte Einstufung (z. B. für Verkauf/Vermietung). Eine Energieberatung ist individuell und zeigt dir konkret, wie du Energie sparst, Komfort steigerst und Fördermittel sinnvoll nutzt."
+  },
+  {
+    question: "Beraten Sie auch zu Wärmepumpe, PV und Dämmung?",
+    answer: "Ja. Wir prüfen, was bei deinem Gebäude technisch und wirtschaftlich Sinn ergibt – und welche Reihenfolge (z. B. erst Gebäudehülle, dann Heizung) am besten passt."
+  },
+  {
+    question: "Arbeiten Sie mit Handwerkern zusammen?",
+    answer: "Ja. Auf Wunsch koordinieren wir die Abstimmung mit Handwerksbetrieben oder arbeiten mit deinem bestehenden Team zusammen. Wir bleiben dabei unabhängig und beraten in deinem Interesse."
+  },
+  {
+    question: "Was ist, wenn sich währenddessen etwas ändert?",
+    answer: "Kein Problem – wir passen den Plan an. Wichtig ist, dass die Maßnahmen weiterhin technisch sinnvoll bleiben und die Förderlogik eingehalten wird."
+  },
+  {
+    question: "Kann ich den Termin verschieben oder stornieren?",
+    answer: "Ja. Die Details (Fristen/Regelung) bekommst du transparent bei der Terminvereinbarung."
   }
 ];
 
