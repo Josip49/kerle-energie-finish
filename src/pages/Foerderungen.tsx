@@ -18,6 +18,7 @@ interface FoerderDetail {
 interface FoerderSection {
   title: string;
   subtitle?: string;
+  savings: string;
   icon: React.ElementType;
   bafa?: { label: string; details: FoerderDetail[] } | null;
   kfw?: { label: string; details: FoerderDetail[] } | null;
@@ -27,6 +28,7 @@ const sections: FoerderSection[] = [
   {
     title: "Heizungstechnik",
     subtitle: "Wärmepumpe, Biomasseheizung, Solarthermie, Brennstoffzelle, wasserstofffähige Heizung, Wärmenetz-/Gebäudenetz-Anschluss",
+    savings: "💰 Sie sparen bis zu 70% der Investitionskosten – bei einer 30.000 € Wärmepumpe sind das bis zu 21.000 € Zuschuss vom Staat.",
     icon: ThermometerSun,
     bafa: null,
     kfw: {
@@ -50,6 +52,7 @@ const sections: FoerderSection[] = [
   {
     title: "Gebäudenetz – Errichtung / Umbau / Erweiterung",
     subtitle: "Errichtung, Umbau oder Erweiterung eines Gebäudenetzes",
+    savings: "💰 Bis zu 70% Zuschuss plus zinsgünstiger Ergänzungskredit – ideal für Mehrfamilienhäuser mit geteilten Heizkosten.",
     icon: Building2,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -76,6 +79,7 @@ const sections: FoerderSection[] = [
   {
     title: "Heizungsoptimierung – Effizienzverbesserung",
     subtitle: "Bestehende Heizungsanlage optimieren und effizienter machen",
+    savings: "💰 15–20% Zuschuss auf bis zu 60.000 € – senken Sie Ihre Heizkosten dauerhaft durch optimierte Einstellungen.",
     icon: Wrench,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -95,6 +99,7 @@ const sections: FoerderSection[] = [
   {
     title: "Heizungsoptimierung – Emissionsminderung",
     subtitle: "Maßnahmen zur Reduzierung von Emissionen bestehender Heizungsanlagen",
+    savings: "💰 50% Zuschuss – die Hälfte der Kosten übernimmt der Staat, damit Ihre Heizung sauberer wird.",
     icon: Flame,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -107,6 +112,7 @@ const sections: FoerderSection[] = [
   {
     title: "Gebäudehülle",
     subtitle: "Dämmung Dach/Fassade/Keller, Fenster, Haustür, sommerlicher Wärmeschutz",
+    savings: "💰 15–20% Zuschuss – neue Fenster oder Dachdämmung für 30.000 € kosten Sie effektiv nur ca. 24.000 €.",
     icon: Home,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -126,6 +132,7 @@ const sections: FoerderSection[] = [
   {
     title: "Anlagentechnik",
     subtitle: "Lüftung / Smart Home",
+    savings: "💰 15–20% Zuschuss – gesundes Raumklima durch geförderte Lüftungsanlagen, z. B. 4.500 € Zuschuss bei 30.000 € Invest.",
     icon: Fan,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -145,6 +152,7 @@ const sections: FoerderSection[] = [
   {
     title: "Komplettsanierung zum Effizienzhaus",
     subtitle: "Umfassende Sanierung zum KfW-Effizienzhaus",
+    savings: "💰 Bis zu 150.000 € Förderkredit mit Tilgungszuschuss – bei einer Komplettsanierung können Sie bis zu 45% der Kosten sparen.",
     icon: Landmark,
     bafa: null,
     kfw: {
@@ -163,6 +171,7 @@ const sections: FoerderSection[] = [
   {
     title: "Fachplanung & Baubegleitung",
     subtitle: "Professionelle Planung und Begleitung Ihrer Sanierungsmaßnahmen",
+    savings: "💰 50% Zuschuss auf die Planungskosten – professionelle Begleitung zum halben Preis.",
     icon: ClipboardList,
     bafa: {
       label: "BAFA (BEG EM Einzelmaßnahme)",
@@ -188,6 +197,7 @@ const sections: FoerderSection[] = [
   {
     title: "Energieberatung / Sanierungsfahrplan",
     subtitle: "Energieberatung für Wohngebäude (iSFP)",
+    savings: "💰 50% Zuschuss auf die Beratung – plus 5% Extra-Bonus auf alle zukünftigen Einzelmaßnahmen dank iSFP.",
     icon: FileText,
     bafa: {
       label: "BAFA (EBW Energieberatung für Wohngebäude)",
@@ -204,6 +214,7 @@ const sections: FoerderSection[] = [
   {
     title: "Kauf Altbau als Familien-Wohneigentum",
     subtitle: "Jung kauft Alt – zinsgünstiger Kredit für Familien",
+    savings: "💰 Bis zu 150.000 € zinsgünstiger Kredit – junge Familien sparen tausende Euro an Zinskosten beim Altbaukauf.",
     icon: PiggyBank,
     bafa: null,
     kfw: {
@@ -216,6 +227,7 @@ const sections: FoerderSection[] = [
   {
     title: "Kauf/Bau von selbstgenutztem Wohneigentum",
     subtitle: "KfW-Wohneigentumsprogramm",
+    savings: "💰 Bis zu 100.000 € zinsgünstiger Kredit – sparen Sie bei der Finanzierung Ihres Eigenheims.",
     icon: DoorOpen,
     bafa: null,
     kfw: {
@@ -228,6 +240,7 @@ const sections: FoerderSection[] = [
   {
     title: "Stromerzeugung (PV / Wasser / Wind)",
     subtitle: "Erneuerbare Energien zur Stromerzeugung",
+    savings: "💰 Zinsgünstiger KfW-Kredit für Ihre PV-Anlage – produzieren Sie Ihren eigenen Strom und senken Sie die Stromrechnung dauerhaft.",
     icon: BatteryCharging,
     bafa: null,
     kfw: {
@@ -240,6 +253,7 @@ const sections: FoerderSection[] = [
   {
     title: "Altersgerechter Umbau",
     subtitle: "Barriereabbau / Einbruchschutz",
+    savings: "💰 Bis zu 12,5% Zuschuss plus zinsgünstiger Kredit – barrierefrei wohnen mit staatlicher Unterstützung.",
     icon: Accessibility,
     bafa: null,
     kfw: {
@@ -334,7 +348,11 @@ const Foerderungen = () => {
                   </div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4 mt-6">
+                <p className="mt-3 text-sm font-medium text-primary bg-primary/5 rounded-lg px-4 py-2.5 border border-primary/10">
+                  {section.savings}
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-4 mt-4">
                   {section.bafa ? (
                     <FoerderCard source={section.bafa.label} details={section.bafa.details} variant="bafa" />
                   ) : (
