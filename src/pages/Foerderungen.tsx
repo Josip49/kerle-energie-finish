@@ -254,28 +254,37 @@ const sections: FoerderSection[] = [
   },
 ];
 
-const FoerderCard = ({ source, details }: { source: string; details: FoerderDetail[] }) => (
-  <div className="bg-card rounded-xl p-5 border border-border/50" style={{ boxShadow: 'var(--shadow-card)' }}>
-    <h4 className="text-sm font-bold text-primary mb-3">{source}</h4>
-    <div className="space-y-2">
-      {details.map((d, i) => (
-        <div key={i}>
-          <div className="flex justify-between items-start gap-2">
-            <span className="text-sm text-muted-foreground">{d.label}</span>
-            {d.value && <span className="text-sm font-semibold text-foreground text-right whitespace-nowrap">{d.value}</span>}
+const FoerderCard = ({ source, details, variant }: { source: string; details: FoerderDetail[]; variant: 'bafa' | 'kfw' }) => {
+  const styles = variant === 'bafa'
+    ? 'bg-amber-50/60 border-amber-200/50 dark:bg-amber-950/20 dark:border-amber-800/30'
+    : 'bg-blue-50/60 border-blue-200/50 dark:bg-blue-950/20 dark:border-blue-800/30';
+  const labelColor = variant === 'bafa'
+    ? 'text-amber-700 dark:text-amber-400'
+    : 'text-blue-700 dark:text-blue-400';
+
+  return (
+    <div className={`rounded-xl p-5 border ${styles}`} style={{ boxShadow: 'var(--shadow-card)' }}>
+      <h4 className={`text-sm font-bold mb-3 ${labelColor}`}>{source}</h4>
+      <div className="space-y-2">
+        {details.map((d, i) => (
+          <div key={i}>
+            <div className="flex justify-between items-start gap-2">
+              <span className="text-sm text-muted-foreground">{d.label}</span>
+              {d.value && <span className="text-sm font-semibold text-foreground text-right whitespace-nowrap">{d.value}</span>}
+            </div>
+            {d.sub && (
+              <ul className="mt-1 ml-4 space-y-0.5">
+                {d.sub.map((s, j) => (
+                  <li key={j} className="text-xs text-muted-foreground list-disc">{s}</li>
+                ))}
+              </ul>
+            )}
           </div>
-          {d.sub && (
-            <ul className="mt-1 ml-4 space-y-0.5">
-              {d.sub.map((s, j) => (
-                <li key={j} className="text-xs text-muted-foreground list-disc">{s}</li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Foerderungen = () => {
   return (
@@ -327,17 +336,17 @@ const Foerderungen = () => {
 
                 <div className="grid md:grid-cols-2 gap-4 mt-6">
                   {section.bafa ? (
-                    <FoerderCard source={section.bafa.label} details={section.bafa.details} />
+                    <FoerderCard source={section.bafa.label} details={section.bafa.details} variant="bafa" />
                   ) : (
-                    <div className="bg-muted/30 rounded-xl p-5 border border-border/30 flex items-center justify-center">
-                      <span className="text-sm text-muted-foreground">BAFA: keine Förderung</span>
+                    <div className="bg-amber-50/30 dark:bg-amber-950/10 rounded-xl p-5 border border-amber-200/30 dark:border-amber-800/20 flex items-center justify-center">
+                      <span className="text-sm text-amber-600/60 dark:text-amber-500/40">BAFA: keine Förderung</span>
                     </div>
                   )}
                   {section.kfw ? (
-                    <FoerderCard source={section.kfw.label} details={section.kfw.details} />
+                    <FoerderCard source={section.kfw.label} details={section.kfw.details} variant="kfw" />
                   ) : (
-                    <div className="bg-muted/30 rounded-xl p-5 border border-border/30 flex items-center justify-center">
-                      <span className="text-sm text-muted-foreground">KfW: keine Förderung</span>
+                    <div className="bg-blue-50/30 dark:bg-blue-950/10 rounded-xl p-5 border border-blue-200/30 dark:border-blue-800/20 flex items-center justify-center">
+                      <span className="text-sm text-blue-600/60 dark:text-blue-500/40">KfW: keine Förderung</span>
                     </div>
                   )}
                 </div>
