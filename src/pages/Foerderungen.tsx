@@ -39,13 +39,13 @@ const sections: FoerderSection[] = [
         { label: "Einkommensbonus", value: "+30%" },
         { label: "Effizienzbonus (nur Wärmepumpe)", value: "+5%" },
         { label: "Max. Investitionskosten", value: "", sub: [
-          "30.000 € (1 WE)",
-          "15.000 € je WE ab der 2. WE",
-          "8.000 € je WE ab der 7. WE"
+          "30.000 € (1 Wohneinheit)",
+          "15.000 € je Wohneinheit ab der 2.",
+          "8.000 € je Wohneinheit ab der 7."
         ]},
         { label: "Max. Zuschuss gesamt", value: "bis 70% (inkl. Boni)" },
         { label: "Pauschaler Zuschlag Biomasse", value: "2.500 €" },
-        { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+        { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
       ]
     }
   },
@@ -61,9 +61,9 @@ const sections: FoerderSection[] = [
         { label: "Geschwindigkeitsbonus", value: "+20%" },
         { label: "Einkommensbonus", value: "+30%" },
         { label: "Max. Investitionskosten", value: "", sub: [
-          "30.000 € (1 WE)",
-          "15.000 € je WE ab der 2. WE",
-          "8.000 € je WE ab der 7. WE"
+          "30.000 € (1 Wohneinheit)",
+          "15.000 € je Wohneinheit ab der 2.",
+          "8.000 € je Wohneinheit ab der 7."
         ]},
         { label: "Max. Zuschuss gesamt", value: "bis 70% (inkl. Boni)" },
         { label: "Pauschaler Zuschlag Biomasse", value: "2.500 €" },
@@ -72,7 +72,7 @@ const sections: FoerderSection[] = [
     kfw: {
       label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
       details: [
-        { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+        { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
       ]
     }
   },
@@ -85,14 +85,14 @@ const sections: FoerderSection[] = [
       label: "BAFA (BEG EM Einzelmaßnahme)",
       details: [
         { label: "Zuschuss", value: "15%" },
-        { label: "Max. Invest", value: "30.000 € pro WE und Jahr" },
-        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro WE und Jahr" },
+        { label: "Max. Invest", value: "30.000 € pro Wohneinheit und Jahr" },
+        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro Wohneinheit und Jahr" },
       ]
     },
     kfw: {
       label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
       details: [
-        { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+        { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
       ]
     }
   },
@@ -118,14 +118,14 @@ const sections: FoerderSection[] = [
       label: "BAFA (BEG EM Einzelmaßnahme)",
       details: [
         { label: "Zuschuss", value: "15%" },
-        { label: "Max. Invest", value: "30.000 € pro WE und Jahr" },
-        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro WE und Jahr" },
+        { label: "Max. Invest", value: "30.000 € pro Wohneinheit und Jahr" },
+        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro Wohneinheit und Jahr" },
       ]
     },
     kfw: {
       label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
       details: [
-        { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+        { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
       ]
     }
   },
@@ -138,14 +138,14 @@ const sections: FoerderSection[] = [
       label: "BAFA (BEG EM Einzelmaßnahme)",
       details: [
         { label: "Zuschuss", value: "15%" },
-        { label: "Max. Invest", value: "30.000 € pro WE und Jahr" },
-        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro WE und Jahr" },
+        { label: "Max. Invest", value: "30.000 € pro Wohneinheit und Jahr" },
+        { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro Wohneinheit und Jahr" },
       ]
     },
     kfw: {
       label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
       details: [
-        { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+        { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
       ]
     }
   },
@@ -158,7 +158,7 @@ const sections: FoerderSection[] = [
     kfw: {
       label: "KfW (BEG WG 261 Wohngebäude)",
       details: [
-        { label: "Förderkredit", value: "max. 120.000 bis 150.000 € pro WE" },
+        { label: "Förderkredit", value: "max. 120.000 bis 150.000 € pro Wohneinheit" },
         { label: "Tilgungszuschuss", value: "5% bis max. 20%", sub: [
           "Je nach Effizienzhaus/Denkmal: 85/70/55/40"
         ]},
@@ -178,8 +178,8 @@ const sections: FoerderSection[] = [
       details: [
         { label: "Zuschuss", value: "50%" },
         { label: "Max. Invest", value: "", sub: [
-          "5.000 € (EFH/ZFH)",
-          "20.000 € (MFH) = 2.000 € pro WE"
+          "5.000 € (Ein-/Zweifamilienhaus)",
+          "20.000 € (Mehrfamilienhaus) = 2.000 € pro Wohneinheit"
         ]},
       ]
     },
@@ -188,8 +188,8 @@ const sections: FoerderSection[] = [
       details: [
         { label: "Tilgungszuschuss", value: "50%" },
         { label: "Max. Invest", value: "", sub: [
-          "10.000 € (EFH/ZFH)",
-          "40.000 € (MFH) = 4.000 € pro WE"
+          "10.000 € (Ein-/Zweifamilienhaus)",
+          "40.000 € (Mehrfamilienhaus) = 4.000 € pro Wohneinheit"
         ]},
       ]
     }
@@ -204,8 +204,8 @@ const sections: FoerderSection[] = [
       details: [
         { label: "Zuschuss", value: "50%" },
         { label: "Max. Zuschuss", value: "", sub: [
-          "650 € (EFH/ZFH)",
-          "850 € (MFH)"
+          "650 € (Ein-/Zweifamilienhaus)",
+          "850 € (Mehrfamilienhaus)"
         ]},
       ]
     },

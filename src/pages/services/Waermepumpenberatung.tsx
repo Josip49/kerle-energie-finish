@@ -35,12 +35,12 @@ const Waermepumpenberatung = () => {
             { label: "Einkommensbonus", value: "+30%" },
             { label: "Effizienzbonus (nur Wärmepumpe)", value: "+5%" },
             { label: "Max. Investitionskosten", value: "", sub: [
-              "30.000 € (1 WE)",
-              "15.000 € je WE ab der 2. WE",
-              "8.000 € je WE ab der 7. WE"
+              "30.000 € (1 Wohneinheit)",
+              "15.000 € je Wohneinheit ab der 2.",
+              "8.000 € je Wohneinheit ab der 7."
             ]},
             { label: "Max. Zuschuss gesamt", value: "bis 70%", highlight: true },
-            { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+            { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
           ]
         }}
       />
