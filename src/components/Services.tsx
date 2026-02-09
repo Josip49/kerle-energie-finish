@@ -52,7 +52,8 @@ const services = [
     title: "Luftdichtheitsprüfung",
     description: "Blower-Door-Test zur Überprüfung der Gebäudehülle.",
     slug: "luftdichtheitspruefung",
-    image: imgLuftdichtheit
+    image: imgLuftdichtheit,
+    disabled: true
   },
   {
     icon: Fan,
@@ -114,6 +115,37 @@ const Services = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <div key={index} className="relative">
+              {service.disabled ? (
+                <div className="service-card-with-image group relative overflow-hidden rounded-xl min-h-[280px] block cursor-not-allowed">
+                  {/* Background Image */}
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${service.image})` }}
+                  />
+                  {/* Extra dark overlay for disabled */}
+                  <div className="absolute inset-0 bg-black/70" />
+
+                  {/* "Noch nicht verfügbar" Banner */}
+                  <div className="absolute top-0 left-0 right-0 z-20 bg-muted-foreground/90 text-white text-center py-2 text-sm font-bold tracking-wide uppercase">
+                    Noch nicht verfügbar
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 h-full flex flex-col justify-end p-6 opacity-60">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="service-icon-light">
+                        <service.icon className="w-6 h-6" />
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-white/80 text-sm mb-4">
+                      {service.description}
+                    </p>
+                  </div>
+                </div>
+              ) : (
               <Link
                 to={`/leistungen/${service.slug}`}
                 className="service-card-with-image group relative overflow-hidden rounded-xl min-h-[280px] block"
@@ -150,6 +182,7 @@ const Services = () => {
                   </span>
                 </div>
               </Link>
+              )}
               
               {/* External Link Button */}
               {service.externalLink && (
