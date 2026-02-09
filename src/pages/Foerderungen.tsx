@@ -282,9 +282,9 @@ const FoerderCard = ({ source, details, variant }: { source: string; details: Fo
       <div className="space-y-2">
         {details.map((d, i) => (
           <div key={i}>
-            <div className="flex justify-between items-start gap-2">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-0.5 sm:gap-2">
               <span className="text-sm text-muted-foreground">{d.label}</span>
-              {d.value && <span className="text-sm font-semibold text-foreground text-right whitespace-nowrap">{d.value}</span>}
+              {d.value && <span className="text-sm font-semibold text-foreground sm:text-right">{d.value}</span>}
             </div>
             {d.sub && (
               <ul className="mt-1 ml-4 space-y-0.5">
@@ -335,7 +335,7 @@ const Foerderungen = () => {
         <section className="py-16">
           <div className="container mx-auto px-4 space-y-10">
             {sections.map((section, idx) => (
-              <div key={idx} className="border border-border/50 rounded-2xl p-6 md:p-8 bg-background">
+              <div key={idx} className="border border-border/50 rounded-2xl p-4 sm:p-6 md:p-8 bg-background">
                 <div className="flex items-start gap-4 mb-2">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/15 to-primary/5 text-primary flex items-center justify-center flex-shrink-0">
                     <section.icon className="w-6 h-6" />

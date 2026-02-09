@@ -32,10 +32,10 @@ const SourceCard = ({ source, variant }: { source: FoerderSource; variant: 'bafa
       <div className="space-y-2">
         {source.details.map((d, i) => (
           <div key={i}>
-            <div className="flex justify-between items-start gap-2">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-0.5 sm:gap-2">
               <span className="text-sm text-muted-foreground">{d.label}</span>
               {d.value && (
-                <span className={`text-sm font-semibold text-right whitespace-nowrap ${d.highlight ? (variant === 'bafa' ? 'text-amber-700 dark:text-amber-400' : 'text-blue-700 dark:text-blue-400') : 'text-foreground'}`}>
+                <span className={`text-sm font-semibold sm:text-right ${d.highlight ? (variant === 'bafa' ? 'text-amber-700 dark:text-amber-400' : 'text-blue-700 dark:text-blue-400') : 'text-foreground'}`}>
                   {d.value}
                 </span>
               )}
