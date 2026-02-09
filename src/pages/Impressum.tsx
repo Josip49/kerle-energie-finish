@@ -14,7 +14,7 @@ const Impressum = () => {
               <section>
                 <h2 className="text-xl font-semibold text-foreground">Angaben gemäß § 5 TMG</h2>
                 <p>
-                  KerLe Energieberatung<br />
+                  KerLe Energieberatung GbR<br />
                   Stefan Kerling & Kevin Leuschner GbR<br />
                   Lindenallee 33<br />
                   91161 Hilpoltstein
