@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
+import senovateLogo from "@/assets/senovate-logo.png";
 import ContactFormDialog from "./ContactFormDialog";
 
 
@@ -13,6 +14,7 @@ const Header = () => {
   const navLinks = [
     { href: "/#ablauf", label: "Ablauf" },
     { href: "/#leistungen", label: "Leistungen" },
+    { href: "/foerderungen", label: "Förderungen" },
     { href: "/#vorteile", label: "Vorteile" },
     { href: "/#faq", label: "FAQ" },
     { href: "/#kontakt", label: "Kontakt" },
@@ -71,6 +73,15 @@ const Header = () => {
               alt="GIH Bayern"
               className="h-10 w-auto"
             />
+            <a
+              href="https://senovate.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+            >
+              <span>erstellt von</span>
+              <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -133,6 +144,15 @@ const Header = () => {
                 alt="GIH Bayern"
                 className="h-8 w-auto"
               />
+              <a
+                href="https://senovate.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+              >
+                <span>erstellt von</span>
+                <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+              </a>
             </div>
           </nav>
         )}
