@@ -31,8 +31,8 @@ const Energieberatung = () => {
           details: [
             { label: "Zuschuss", value: "50%", highlight: true },
             { label: "Max. Zuschuss", value: "", sub: [
-              "650 € (EFH/ZFH)",
-              "850 € (MFH)"
+              "650 € (Ein-/Zweifamilienhaus)",
+              "850 € (Mehrfamilienhaus)"
             ]},
           ]
         }}

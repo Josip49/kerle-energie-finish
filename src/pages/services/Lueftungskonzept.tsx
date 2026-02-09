@@ -30,14 +30,14 @@ const Lueftungskonzept = () => {
           label: "BAFA (BEG EM Einzelmaßnahme – Anlagentechnik)",
           details: [
             { label: "Zuschuss", value: "15%", highlight: true },
-            { label: "Max. Invest", value: "30.000 € pro WE und Jahr" },
-            { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro WE und Jahr" },
+            { label: "Max. Invest", value: "30.000 € pro Wohneinheit und Jahr" },
+            { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro Wohneinheit und Jahr" },
           ]
         }}
         kfw={{
           label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
           details: [
-            { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+            { label: "Ergänzungskredit", value: "max. 120.000 € pro Wohneinheit" },
           ]
         }}
       />

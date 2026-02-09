@@ -31,8 +31,8 @@ const BzABestaetigung = () => {
           details: [
             { label: "Zuschuss", value: "50%", highlight: true },
             { label: "Max. Invest", value: "", sub: [
-              "5.000 € (EFH/ZFH)",
-              "20.000 € (MFH) = 2.000 € pro WE"
+              "5.000 € (Ein-/Zweifamilienhaus)",
+              "20.000 € (Mehrfamilienhaus) = 2.000 € pro Wohneinheit"
             ]},
           ]
         }}
@@ -41,8 +41,8 @@ const BzABestaetigung = () => {
           details: [
             { label: "Tilgungszuschuss", value: "50%", highlight: true },
             { label: "Max. Invest", value: "", sub: [
-              "10.000 € (EFH/ZFH)",
-              "40.000 € (MFH) = 4.000 € pro WE"
+              "10.000 € (Ein-/Zweifamilienhaus)",
+              "40.000 € (Mehrfamilienhaus) = 4.000 € pro Wohneinheit"
             ]},
           ]
         }}
