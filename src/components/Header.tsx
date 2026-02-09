@@ -25,7 +25,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center relative z-10" onClick={() => setIsMenuOpen(false)}>
             <img
               src={logo}
               alt="KerLe Energieberatung"
