@@ -1,11 +1,12 @@
 import { Flame, ExternalLink } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const Waermepumpenberatung = () => {
   return (
     <ServicePageLayout
       title="Wärmepumpenberatung"
-      subtitle="Die richtige Wärmepumpe für Ihr Gebäude | Bis zu 40% Förderung"
+      subtitle="Die richtige Wärmepumpe für Ihr Gebäude | Bis zu 70% Förderung"
       description="Wärmepumpen sind die Zukunft des Heizens – aber nicht jede Wärmepumpe passt zu jedem Gebäude. Wir beraten Sie unabhängig und finden die optimale Lösung für Ihre Situation."
       icon={<Flame className="w-6 h-6" />}
       benefits={[
@@ -24,6 +25,26 @@ const Waermepumpenberatung = () => {
         "Förderberatung und Unterstützung beim Antrag"
       ]}
     >
+      <FoerderInfoBox
+        bafa={null}
+        kfw={{
+          label: "KfW (BEG EM 458 Einzelmaßnahme)",
+          details: [
+            { label: "Basisförderung", value: "30% Zuschuss", highlight: true },
+            { label: "Geschwindigkeitsbonus", value: "+20%" },
+            { label: "Einkommensbonus", value: "+30%" },
+            { label: "Effizienzbonus (nur Wärmepumpe)", value: "+5%" },
+            { label: "Max. Investitionskosten", value: "", sub: [
+              "30.000 € (1 WE)",
+              "15.000 € je WE ab der 2. WE",
+              "8.000 € je WE ab der 7. WE"
+            ]},
+            { label: "Max. Zuschuss gesamt", value: "bis 70%", highlight: true },
+            { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+          ]
+        }}
+      />
+
       {/* Online Wärmepumpen Check CTA */}
       <div className="mt-12 p-6 bg-primary/5 rounded-xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div>

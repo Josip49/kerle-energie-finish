@@ -1,5 +1,6 @@
 import { Sun } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const PhotovoltaikBeratung = () => {
   return (
@@ -24,6 +25,16 @@ const PhotovoltaikBeratung = () => {
         "Empfehlung zum weiteren Vorgehen"
       ]}
     >
+      <FoerderInfoBox
+        bafa={null}
+        kfw={{
+          label: "KfW (Erneuerbare Energien – Standard 270)",
+          details: [
+            { label: "Förderung", value: "Zinsgünstiger Kredit", highlight: true },
+          ]
+        }}
+      />
+
       <div className="mt-12 p-6 bg-muted rounded-xl">
         <h3 className="font-semibold text-foreground mb-4">Warum Photovoltaik?</h3>
         <div className="grid md:grid-cols-2 gap-6 text-sm text-muted-foreground">

@@ -1,5 +1,6 @@
 import { ClipboardList } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const Sanierungsfahrplan = () => {
   return (
@@ -23,7 +24,21 @@ const Sanierungsfahrplan = () => {
         "Entwicklung Ihres individuellen Sanierungsfahrplans",
         "Persönliche Erläuterung der Empfehlungen"
       ]}
-    />
+    >
+      <FoerderInfoBox
+        bafa={{
+          label: "BAFA (EBW Energieberatung für Wohngebäude)",
+          details: [
+            { label: "Zuschuss", value: "50%", highlight: true },
+            { label: "Max. Zuschuss", value: "", sub: [
+              "650 € (EFH/ZFH)",
+              "850 € (MFH)"
+            ]},
+          ]
+        }}
+        kfw={null}
+      />
+    </ServicePageLayout>
   );
 };
 

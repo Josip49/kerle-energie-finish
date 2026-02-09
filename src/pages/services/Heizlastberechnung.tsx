@@ -1,5 +1,6 @@
 import { Thermometer } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const Heizlastberechnung = () => {
   return (
@@ -23,7 +24,30 @@ const Heizlastberechnung = () => {
         "Dokumentation mit raumweiser Aufschlüsselung",
         "Übergabe der Unterlagen an Ihren Heizungsbauer"
       ]}
-    />
+    >
+      <FoerderInfoBox
+        bafa={{
+          label: "BAFA (BEG EM Einzelmaßnahme – Fachplanung & Baubegleitung)",
+          details: [
+            { label: "Zuschuss", value: "50%", highlight: true },
+            { label: "Max. Invest", value: "", sub: [
+              "5.000 € (EFH/ZFH)",
+              "20.000 € (MFH) = 2.000 € pro WE"
+            ]},
+          ]
+        }}
+        kfw={{
+          label: "KfW (BEG WG 261 Wohngebäude)",
+          details: [
+            { label: "Tilgungszuschuss", value: "50%", highlight: true },
+            { label: "Max. Invest", value: "", sub: [
+              "10.000 € (EFH/ZFH)",
+              "40.000 € (MFH) = 4.000 € pro WE"
+            ]},
+          ]
+        }}
+      />
+    </ServicePageLayout>
   );
 };
 
