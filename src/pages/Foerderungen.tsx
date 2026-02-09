@@ -44,13 +44,13 @@ const Foerderungen = () => {
         {/* Hero */}
         <section className="pt-32 pb-16 bg-muted/30">
           <div className="container mx-auto px-4">
-            <Link
-              to="/#leistungen"
+            <a
+              href="/#leistungen"
               className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Übersicht
-            </Link>
+            </a>
 
             <div className="max-w-4xl">
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
