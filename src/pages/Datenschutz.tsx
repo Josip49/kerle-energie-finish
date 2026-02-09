@@ -28,6 +28,7 @@ const Datenschutz = () => {
                 <p>
                   KerLe Energieberatung<br />
                   Stefan Kerling & Kevin Leuschner GbR<br />
+                  (Gesellschaft bürgerlichen Rechts)<br />
                   Lindenallee 33<br />
                   91161 Hilpoltstein<br /><br />
                   Telefon: 0162 3598287<br />
