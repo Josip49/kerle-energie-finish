@@ -77,7 +77,7 @@ const Header = () => {
               href="https://senovate.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+              className="flex flex-col items-center gap-0.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
             >
               <span>erstellt von</span>
               <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
@@ -148,7 +148,7 @@ const Header = () => {
                 href="https://senovate.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+                className="flex flex-col items-center gap-0.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
               >
                 <span>erstellt von</span>
                 <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
