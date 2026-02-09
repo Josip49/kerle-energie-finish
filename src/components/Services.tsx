@@ -29,7 +29,8 @@ const services = [
     title: "Energie- & Fördermittelberatung",
     description: "Umfassende Beratung zu Energieeffizienz und allen verfügbaren Förderprogrammen.",
     slug: "energieberatung",
-    image: imgEnergieberatung
+    image: imgEnergieberatung,
+    foerderung: "Alle Programme"
   },
   {
     icon: Thermometer,
@@ -43,7 +44,8 @@ const services = [
     title: "Sanierungsfahrplan",
     description: "Ihr individueller Schritt-für-Schritt-Plan zur energetischen Sanierung.",
     slug: "sanierungsfahrplan",
-    image: imgSanierung
+    image: imgSanierung,
+    foerderung: "+5% iSFP-Bonus"
   },
   {
     icon: Wind,
@@ -72,6 +74,7 @@ const services = [
     description: "Individuelle Beratung zur optimalen Wärmepumpenlösung für Ihr Gebäude.",
     slug: "waermepumpenberatung",
     image: imgWaermepumpe,
+    foerderung: "Bis zu 40%",
     externalLink: {
       label: "Online Wärmepumpen Check",
       url: "https://check.autarc.energy/kerle_energieberatung_gbr/wrmepumpencheck/"
@@ -82,14 +85,16 @@ const services = [
     title: "Photovoltaik-Beratung",
     description: "Planung und Wirtschaftlichkeitsberechnung für Ihre Solaranlage.",
     slug: "photovoltaik-beratung",
-    image: imgPhotovoltaik
+    image: imgPhotovoltaik,
+    foerderung: "EEG-Vergütung"
   },
   {
     icon: CheckCircle,
     title: "BzA – Bestätigung zum Antrag",
     description: "Offizielle Bestätigung für Ihren BAFA-Förderantrag.",
     slug: "bza-bestaetigung",
-    image: imgBza
+    image: imgBza,
+    foerderung: "BAFA-Pflicht"
   }
 ];
 
@@ -123,8 +128,15 @@ const Services = () => {
 
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col justify-end p-6">
-                  <div className="service-icon-light mb-4">
-                    <service.icon className="w-6 h-6" />
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="service-icon-light">
+                      <service.icon className="w-6 h-6" />
+                    </div>
+                    {service.foerderung && (
+                      <span className="px-2.5 py-1 bg-primary/90 text-primary-foreground text-xs font-bold rounded-full">
+                        {service.foerderung}
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary-foreground transition-colors">
                     {service.title}

@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
+import Foerderungen from "./pages/Foerderungen";
 
 // Service Pages
 import Energieberatung from "./pages/services/Energieberatung";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/foerderungen" element={<Foerderungen />} />
 
           {/* Service Routes */}
           <Route path="/leistungen/energieberatung" element={<Energieberatung />} />

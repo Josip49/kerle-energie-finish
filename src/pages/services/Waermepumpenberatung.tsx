@@ -1,11 +1,11 @@
-import { Flame } from "lucide-react";
+import { Flame, ExternalLink } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
 
 const Waermepumpenberatung = () => {
   return (
     <ServicePageLayout
       title="Wärmepumpenberatung"
-      subtitle="Die richtige Wärmepumpe für Ihr Gebäude"
+      subtitle="Die richtige Wärmepumpe für Ihr Gebäude | Bis zu 40% Förderung"
       description="Wärmepumpen sind die Zukunft des Heizens – aber nicht jede Wärmepumpe passt zu jedem Gebäude. Wir beraten Sie unabhängig und finden die optimale Lösung für Ihre Situation."
       icon={<Flame className="w-6 h-6" />}
       benefits={[
@@ -24,6 +24,23 @@ const Waermepumpenberatung = () => {
         "Förderberatung und Unterstützung beim Antrag"
       ]}
     >
+      {/* Online Wärmepumpen Check CTA */}
+      <div className="mt-12 p-6 bg-primary/5 rounded-xl border border-primary/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h3 className="font-semibold text-foreground mb-1">Ist Ihr Gebäude geeignet?</h3>
+          <p className="text-sm text-muted-foreground">Machen Sie den kostenlosen Online Wärmepumpen Check und finden Sie es heraus.</p>
+        </div>
+        <a
+          href="https://check.autarc.energy/kerle_energieberatung_gbr/wrmepumpencheck/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all whitespace-nowrap"
+        >
+          <ExternalLink className="w-4 h-4" />
+          Online Wärmepumpen Check
+        </a>
+      </div>
+
       <div className="mt-12 p-6 bg-muted rounded-xl">
         <h3 className="font-semibold text-foreground mb-4">Wärmepumpen-Typen im Überblick</h3>
         <div className="grid md:grid-cols-3 gap-6 text-sm text-muted-foreground">
