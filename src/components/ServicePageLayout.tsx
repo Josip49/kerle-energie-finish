@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Phone, Mail, ArrowLeft, Check } from "lucide-react";
+import { Phone, Mail, ArrowLeft, Check, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -26,7 +26,10 @@ const ServicePageLayout = ({
   icon,
   children
 }: ServicePageLayoutProps) => {
-  const emailSubject = encodeURIComponent("Kundenanfrage (Grund)");
+  const stefanNumber = "4915140368889";
+  const kevinNumber = "491623598287";
+  const whatsAppMessage = encodeURIComponent(`Hallo, ich interessiere mich für: ${title}. Können Sie mich dazu beraten?`);
+  const emailSubject = encodeURIComponent(`Anfrage: ${title}`);
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -102,7 +105,7 @@ const ServicePageLayout = ({
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* WhatsApp CTA Section */}
         <section className="py-16 bg-primary/5">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
@@ -110,8 +113,30 @@ const ServicePageLayout = ({
                 Interesse geweckt?
               </h2>
               <p className="text-muted-foreground mb-8">
-                Lassen Sie sich kostenlos und unverbindlich beraten. Wir nehmen uns Zeit für Ihre Fragen.
+                Schreib uns direkt per WhatsApp – schnell, einfach und unverbindlich.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+                <Button size="lg" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
+                  <a
+                    href={`https://wa.me/${stefanNumber}?text=${whatsAppMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Stefan per WhatsApp
+                  </a>
+                </Button>
+                <Button size="lg" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
+                  <a
+                    href={`https://wa.me/${kevinNumber}?text=${whatsAppMessage}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MessageCircle className="w-5 h-5 mr-2" />
+                    Kevin per WhatsApp
+                  </a>
+                </Button>
+              </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <CallDialog>
                   <Phone className="w-5 h-5 mr-2" />
