@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import CallDialog from "@/components/CallDialog";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -54,6 +54,27 @@ const Contact = () => {
                   <p className="text-sm text-muted-foreground mt-1">
                     Antwort innerhalb von 24h
                   </p>
+                </div>
+              </div>
+
+              {/* WhatsApp Hinweis */}
+              <div className="flex items-start gap-4">
+                <div className="contact-icon" style={{ background: 'linear-gradient(135deg, #25D366, #128C7E)' }}>
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
+                  <p className="text-muted-foreground text-sm">
+                    Schnell & unkompliziert – schreiben Sie uns einfach per WhatsApp. Anfragen werden in der Regel innerhalb weniger Minuten beantwortet.
+                  </p>
+                  <div className="flex gap-3 mt-2">
+                    <a href="https://wa.me/4915140368889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung." target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium">
+                      Stefan →
+                    </a>
+                    <a href="https://wa.me/491623598287?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung." target="_blank" rel="noopener noreferrer" className="text-primary hover:underline text-sm font-medium">
+                      Kevin →
+                    </a>
+                  </div>
                 </div>
               </div>
 
