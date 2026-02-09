@@ -10,9 +10,12 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden pt-20 min-h-[90vh] md:min-h-screen flex items-center">
       {/* Background Image with Overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
-        style={{ backgroundImage: `url(${heroBg})` }}
+      <img
+        src={heroBg}
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70" />
       
