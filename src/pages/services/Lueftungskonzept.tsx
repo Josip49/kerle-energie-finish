@@ -1,5 +1,6 @@
 import { Fan } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const Lueftungskonzept = () => {
   return (
@@ -23,7 +24,24 @@ const Lueftungskonzept = () => {
         "Empfehlung geeigneter Lüftungssysteme",
         "Dokumentation für Förderanträge"
       ]}
-    />
+    >
+      <FoerderInfoBox
+        bafa={{
+          label: "BAFA (BEG EM Einzelmaßnahme – Anlagentechnik)",
+          details: [
+            { label: "Zuschuss", value: "15%", highlight: true },
+            { label: "Max. Invest", value: "30.000 € pro WE und Jahr" },
+            { label: "Mit iSFP-Bonus", value: "+5% → dann max. 60.000 € pro WE und Jahr" },
+          ]
+        }}
+        kfw={{
+          label: "KfW (BEG EM 358/359 Einzelmaßnahme)",
+          details: [
+            { label: "Ergänzungskredit", value: "max. 120.000 € pro WE" },
+          ]
+        }}
+      />
+    </ServicePageLayout>
   );
 };
 

@@ -1,5 +1,6 @@
 import { CheckCircle } from "lucide-react";
 import ServicePageLayout from "@/components/ServicePageLayout";
+import FoerderInfoBox from "@/components/FoerderInfoBox";
 
 const BzABestaetigung = () => {
   return (
@@ -24,6 +25,29 @@ const BzABestaetigung = () => {
         "Unterstützung bei Rückfragen der BAFA"
       ]}
     >
+      <FoerderInfoBox
+        bafa={{
+          label: "BAFA (BEG EM Einzelmaßnahme – Fachplanung & Baubegleitung)",
+          details: [
+            { label: "Zuschuss", value: "50%", highlight: true },
+            { label: "Max. Invest", value: "", sub: [
+              "5.000 € (EFH/ZFH)",
+              "20.000 € (MFH) = 2.000 € pro WE"
+            ]},
+          ]
+        }}
+        kfw={{
+          label: "KfW (BEG WG 261 Wohngebäude)",
+          details: [
+            { label: "Tilgungszuschuss", value: "50%", highlight: true },
+            { label: "Max. Invest", value: "", sub: [
+              "10.000 € (EFH/ZFH)",
+              "40.000 € (MFH) = 4.000 € pro WE"
+            ]},
+          ]
+        }}
+      />
+
       <div className="mt-12 p-6 bg-muted rounded-xl">
         <h3 className="font-semibold text-foreground mb-4">Was ist die BzA?</h3>
         <p className="text-sm text-muted-foreground">

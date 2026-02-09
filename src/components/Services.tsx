@@ -75,7 +75,7 @@ const services = [
     description: "Individuelle Beratung zur optimalen Wärmepumpenlösung für Ihr Gebäude.",
     slug: "waermepumpenberatung",
     image: imgWaermepumpe,
-    foerderung: "Bis zu 40%",
+    foerderung: "Bis zu 70%",
     externalLink: {
       label: "Online Wärmepumpen Check",
       url: "https://check.autarc.energy/kerle_energieberatung_gbr/wrmepumpencheck/"
