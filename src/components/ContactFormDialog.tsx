@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Send, Upload, X } from "lucide-react";
+import { Send, Upload, X, MessageCircle, Mail } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -106,12 +106,8 @@ const ContactFormDialog = ({ children, trigger, className }: ContactFormDialogPr
     setSelectedFiles((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const onSubmit = async (data: FormData) => {
-    setIsSubmitting(true);
-    
-    // Build email body
-    const emailBody = `
-Neue Anfrage über das Kontaktformular
+  const buildMessage = (data: FormData) => {
+    return `Neue Anfrage über das Kontaktformular
 
 Name: ${data.vorname} ${data.nachname}
 E-Mail: ${data.email}
@@ -123,29 +119,46 @@ Baujahr: ${data.baujahr || "Nicht angegeben"}
 Objekttyp: ${data.objekttyp || "Nicht angegeben"}
 
 Nachricht:
-${data.nachricht || "Keine zusätzliche Nachricht"}
+${data.nachricht || "Keine zusätzliche Nachricht"}${selectedFiles.length > 0 ? `\n\nHinweis: ${selectedFiles.length} Datei(en) wurden erwähnt.` : ""}`;
+  };
 
-${selectedFiles.length > 0 ? `Hinweis: ${selectedFiles.length} Datei(en) wurden angehängt.` : ""}
-    `.trim();
+  const sendViaWhatsApp = (data: FormData, number: string) => {
+    const message = encodeURIComponent(buildMessage(data));
+    window.open(`https://wa.me/${number}?text=${message}`, "_blank");
+    handleSuccess();
+  };
 
+  const sendViaEmail = (data: FormData) => {
+    const emailBody = buildMessage(data);
     const mailtoLink = `mailto:kerle@rothsee-energieberatung.de?subject=${encodeURIComponent(
       `Anfrage: ${data.anfrage[0]} - ${data.vorname} ${data.nachname}`
     )}&body=${encodeURIComponent(emailBody)}`;
-
-    // Open mail client
     window.location.href = mailtoLink;
+    handleSuccess();
+  };
 
+  const handleSuccess = () => {
     setIsSubmitting(false);
     setSubmitSuccess(true);
-
-    // Reset form after short delay
     setTimeout(() => {
       reset();
       setSelectedAnfragen([]);
       setSelectedFiles([]);
       setSubmitSuccess(false);
+      setFormData(null);
+      setShowSendOptions(false);
       setOpen(false);
     }, 2000);
+  };
+
+  const [formDataState, setFormData] = useState<FormData | null>(null);
+  const [showSendOptions, setShowSendOptions] = useState(false);
+
+  const onSubmit = async (data: FormData) => {
+    setIsSubmitting(true);
+    setFormData(data);
+    setShowSendOptions(true);
+    setIsSubmitting(false);
   };
 
   return (
@@ -169,8 +182,62 @@ ${selectedFiles.length > 0 ? `Hinweis: ${selectedFiles.length} Datei(en) wurden 
             </div>
             <h3 className="text-xl font-semibold mb-2">Vielen Dank!</h3>
             <p className="text-muted-foreground">
-              Ihr E-Mail-Programm wird geöffnet. Bitte senden Sie die E-Mail ab.
+              Ihre Anfrage wird übermittelt.
             </p>
+          </div>
+        ) : showSendOptions && formDataState ? (
+          <div className="py-8 text-center space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Wie möchten Sie die Anfrage senden?</h3>
+              <p className="text-muted-foreground text-sm">Wählen Sie WhatsApp für eine schnelle Antwort oder E-Mail.</p>
+            </div>
+            
+            <div className="space-y-3">
+              <p className="text-sm font-medium text-foreground">Per WhatsApp (schnell & unkompliziert):</p>
+              <div className="grid grid-cols-2 gap-3">
+                <Button
+                  size="lg"
+                  className="w-full"
+                  style={{ background: '#25D366' }}
+                  onClick={() => sendViaWhatsApp(formDataState, "4915140368889")}
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  An Stefan
+                </Button>
+                <Button
+                  size="lg"
+                  className="w-full"
+                  style={{ background: '#25D366' }}
+                  onClick={() => sendViaWhatsApp(formDataState, "491623598287")}
+                >
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  An Kevin
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute inset-0 flex items-center"><span className="w-full border-t border-border" /></div>
+              <div className="relative flex justify-center text-xs"><span className="bg-background px-2 text-muted-foreground">oder</span></div>
+            </div>
+
+            <Button
+              size="lg"
+              variant="outline"
+              className="w-full"
+              onClick={() => sendViaEmail(formDataState)}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Per E-Mail senden
+            </Button>
+
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => { setShowSendOptions(false); setFormData(null); }}
+            >
+              ← Zurück zum Formular
+            </Button>
           </div>
         ) : (
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 mt-4">
