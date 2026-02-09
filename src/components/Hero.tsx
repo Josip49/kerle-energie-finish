@@ -1,4 +1,5 @@
-import { Phone, Mail, ArrowRight, FileText } from "lucide-react";
+import { Phone, Mail, ArrowRight, FileText, BadgeEuro } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CallDialog from "@/components/CallDialog";
 import ContactFormDialog from "@/components/ContactFormDialog";
@@ -62,6 +63,16 @@ const Hero = () => {
               <Phone className="w-5 h-5 mr-2" />
               Jetzt kostenlos anrufen
             </CallDialog>
+          </div>
+
+          {/* Förderungen Button */}
+          <div className="mt-4 flex justify-center px-4 sm:px-0">
+            <Button size="lg" variant="outline" className="border-primary/60 bg-primary/10 text-white backdrop-blur-sm hover:bg-primary/20 hover:border-primary" asChild>
+              <Link to="/foerderungen">
+                <BadgeEuro className="w-5 h-5 mr-2" />
+                Förderungen im Überblick
+              </Link>
+            </Button>
           </div>
 
           {/* Scroll Indicator */}
