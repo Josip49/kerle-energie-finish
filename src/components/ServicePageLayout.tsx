@@ -36,16 +36,22 @@ const ServicePageLayout = ({
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="pt-32 pb-16 bg-muted/30">
-          <div className="container mx-auto px-4">
+        {/* Sticky Back Button */}
+        <div className="fixed top-20 left-0 right-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border/50">
+          <div className="container mx-auto px-4 py-2">
             <a
               href="/#leistungen"
-              className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8"
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Zurück zur Übersicht
             </a>
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="pt-40 pb-16 bg-muted/30">
+          <div className="container mx-auto px-4">
 
             <div className="max-w-4xl">
               <div className="service-icon mb-6">
