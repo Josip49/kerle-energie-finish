@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
-import senovateLogo from "@/assets/senovate-logo.png";
+
 import ContactFormDialog from "./ContactFormDialog";
 
 
@@ -77,10 +77,10 @@ const Header = () => {
               href="https://senovate.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-0.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+              className="flex flex-col items-center gap-0 text-muted-foreground hover:text-primary transition-colors"
             >
-              <span>erstellt von</span>
-              <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+              <span className="text-[9px] leading-tight">erstellt von</span>
+              <span className="text-sm font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
             </a>
           </div>
 
@@ -148,10 +148,10 @@ const Header = () => {
                 href="https://senovate.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-0.5 text-[10px] text-muted-foreground hover:text-primary transition-colors"
+                className="flex flex-col items-center gap-0 text-muted-foreground hover:text-primary transition-colors"
               >
-                <span>erstellt von</span>
-                <img src={senovateLogo} alt="Senovate" className="h-5 w-auto" />
+                <span className="text-[9px] leading-tight">erstellt von</span>
+                <span className="text-sm font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
               </a>
             </div>
           </nav>

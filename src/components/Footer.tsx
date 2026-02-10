@@ -3,7 +3,7 @@ import { Phone, Mail } from "lucide-react";
 import logo from "@/assets/logo-kerle.jpeg";
 import certGih from "@/assets/cert-gih-bayern.jpeg";
 import certEee from "@/assets/cert-energieeffizienz.jpeg";
-import senovateLogo from "@/assets/senovate-logo.png";
+
 import { StefanKerling, KevinLeuschner, KerLeBrand } from "@/components/StyledName";
 
 const Footer = () => {
@@ -106,10 +106,10 @@ const Footer = () => {
             href="https://senovate.de" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-xs text-muted-foreground hover:text-primary transition-colors"
+            className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
           >
             <span>Erstellt von</span>
-            <img src={senovateLogo} alt="Senovate" className="h-7 md:h-8 w-auto" />
+            <span className="text-base font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
           </a>
         </div>
       </div>
