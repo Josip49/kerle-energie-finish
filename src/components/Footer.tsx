@@ -106,10 +106,10 @@ const Footer = () => {
             href="https://senovate.de" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-primary transition-colors"
+            className="group flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
           >
-            <span>Erstellt von</span>
-            <span className="text-base font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
+            <span className="group-hover:text-[#1a8fd1]">Erstellt von</span>
+            <span className="text-base font-bold tracking-tight group-hover:text-[#1a8fd1] transition-colors" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
           </a>
         </div>
       </div>
