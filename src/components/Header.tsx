@@ -77,10 +77,10 @@ const Header = () => {
               href="https://senovate.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-0 text-muted-foreground hover:text-primary transition-colors"
+              className="group flex flex-col items-center gap-0 text-muted-foreground transition-colors"
             >
-              <span className="text-[9px] leading-tight">erstellt von</span>
-              <span className="text-sm font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
+              <span className="text-[9px] leading-tight group-hover:text-[#1a8fd1]">erstellt von</span>
+              <span className="text-sm font-bold tracking-tight group-hover:text-[#1a8fd1] transition-colors" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
             </a>
           </div>
 
@@ -148,10 +148,10 @@ const Header = () => {
                 href="https://senovate.de"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center gap-0 text-muted-foreground hover:text-primary transition-colors"
+                className="group flex flex-col items-center gap-0 text-muted-foreground transition-colors"
               >
-                <span className="text-[9px] leading-tight">erstellt von</span>
-                <span className="text-sm font-bold tracking-tight" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
+                <span className="text-[9px] leading-tight group-hover:text-[#1a8fd1]">erstellt von</span>
+                <span className="text-sm font-bold tracking-tight group-hover:text-[#1a8fd1] transition-colors" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
               </a>
             </div>
           </nav>
