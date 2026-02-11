@@ -1,14 +1,21 @@
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 const faqs = [
   {
     question: "Was kostet eine Energieberatung?",
     answer: "Die Kosten hängen vom Gebäude (Größe, Zustand, Baujahr) und vom gewünschten Umfang ab (z. B. iSFP, Einzelmaßnahmen, Förderanträge). Nach einem kurzen Erstgespräch nennen wir dir einen transparenten Festpreis – und zeigen dir, welche Teile davon förderfähig sind."
+  },
+  {
+    question: "Welche Förderungen gibt es?",
+    answer: "Das hängt vom Vorhaben ab (z. B. Heizungstausch, Dämmung, Fenster, Lüftung, ganzheitliche Sanierung). Wir prüfen, welche Förderprogramme in deinem Fall passen, welche Voraussetzungen gelten und welche Kombination sinnvoll ist."
   },
   {
     question: "Wie läuft die Energieberatung bei Ihnen ab?",
@@ -29,10 +36,6 @@ const faqs = [
   {
     question: "Was bedeutet EEE/BAFA-zertifiziert?",
     answer: 'EEE steht für „Energieeffizienz-Experte" (gelistet in der offiziellen Expertenliste). BAFA-zertifiziert bedeutet, dass wir für bestimmte Förderprogramme zugelassen sind und die notwendigen Nachweise fachlich korrekt erstellen dürfen.'
-  },
-  {
-    question: "Welche Förderungen gibt es?",
-    answer: "Das hängt vom Vorhaben ab (z. B. Heizungstausch, Dämmung, Fenster, Lüftung, ganzheitliche Sanierung). Wir prüfen, welche Förderprogramme in deinem Fall passen, welche Voraussetzungen gelten und welche Kombination sinnvoll ist."
   },
   {
     question: "Übernehmen Sie die Förderanträge?",
@@ -76,7 +79,12 @@ const faqs = [
   }
 ];
 
+const INITIAL_COUNT = 3;
+
 const FAQ = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visibleFaqs = showAll ? faqs : faqs.slice(0, INITIAL_COUNT);
+
   return (
     <section id="faq" className="py-16 md:py-20 lg:py-32 section-warm">
       <div className="container mx-auto px-4">
@@ -91,7 +99,7 @@ const FAQ = () => {
 
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
+            {visibleFaqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="faq-item">
                 <AccordionTrigger className="faq-trigger">
                   {faq.question}
@@ -102,6 +110,33 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+
+          {!showAll && faqs.length > INITIAL_COUNT && (
+            <div className="text-center mt-8">
+              <Button
+                variant="outline"
+                size="default"
+                onClick={() => setShowAll(true)}
+                className="gap-2"
+              >
+                <ChevronDown className="w-4 h-4" />
+                Alle {faqs.length} Fragen anzeigen
+              </Button>
+            </div>
+          )}
+
+          {showAll && (
+            <div className="text-center mt-8">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setShowAll(false)}
+                className="text-muted-foreground"
+              >
+                Weniger anzeigen
+              </Button>
+            </div>
+          )}
         </div>
       </div>
     </section>
