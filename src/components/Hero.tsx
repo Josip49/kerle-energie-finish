@@ -1,4 +1,5 @@
 import { Phone, Mail, ArrowRight, FileText, BadgeEuro } from "lucide-react";
+import { KerLeBrand } from "@/components/StyledName";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import CallDialog from "@/components/CallDialog";
@@ -46,8 +47,8 @@ const Hero = () => {
           </p>
 
           <p className="text-base md:text-lg text-white/80 mb-8 md:mb-10 max-w-2xl mx-auto px-2">
-            KerLe steht für Klarheit statt Bauchgefühl. Wir beraten ehrlich –
-            auch wenn sich eine Maßnahme nicht rechnet. Willkommen bei KerLe.
+            <KerLeBrand /> steht für Klarheit statt Bauchgefühl. Wir beraten ehrlich –
+            auch wenn sich eine Maßnahme nicht rechnet. Willkommen bei <KerLeBrand />.
           </p>
 
           {/* Free Consultation Badge */}
