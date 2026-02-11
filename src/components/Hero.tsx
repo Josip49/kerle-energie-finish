@@ -19,6 +19,8 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/60 to-black/70" />
+      {/* Bottom fade into next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[hsl(40,20%,96%)]" />
       
       <div className="container mx-auto px-4 py-12 md:py-20 lg:py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
