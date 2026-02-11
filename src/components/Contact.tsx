@@ -102,30 +102,30 @@ const Contact = () => {
                 Wir nehmen uns Zeit für Ihre Fragen.
               </p>
 
-              <div className="space-y-4">
-                <CallDialog className="w-full">
-                  <Phone className="w-5 h-5 mr-2" />
+              <div className="space-y-3">
+                <CallDialog className="w-full" size="default">
+                  <Phone className="w-4 h-4 mr-1.5" />
                   Jetzt kostenlos anrufen
                 </CallDialog>
 
-                <Button size="lg" variant="outline" className="w-full" asChild>
+                <Button size="default" variant="outline" className="w-full" asChild>
                   <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`}>
-                    <Mail className="w-5 h-5 mr-2" />
+                    <Mail className="w-4 h-4 mr-1.5" />
                     E-Mail schreiben
                   </a>
                 </Button>
 
                 {isMobile && (
-                  <div className="grid grid-cols-2 gap-4">
-                    <Button size="lg" className="w-full whatsapp-cta" asChild>
+                  <div className="grid grid-cols-2 gap-3">
+                    <Button size="default" className="w-full whatsapp-cta" asChild>
                       <a href="https://wa.me/4915140368889?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung." target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="w-5 h-5 mr-2" />
+                        <MessageCircle className="w-4 h-4 mr-1.5" />
                         Stefan
                       </a>
                     </Button>
-                    <Button size="lg" className="w-full whatsapp-cta" asChild>
+                    <Button size="default" className="w-full whatsapp-cta" asChild>
                       <a href="https://wa.me/491623598287?text=Hallo%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Energieberatung." target="_blank" rel="noopener noreferrer">
-                        <MessageCircle className="w-5 h-5 mr-2" />
+                        <MessageCircle className="w-4 h-4 mr-1.5" />
                         Kevin
                       </a>
                     </Button>

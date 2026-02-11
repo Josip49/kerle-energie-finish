@@ -121,36 +121,36 @@ const ServicePageLayout = ({
               <p className="text-muted-foreground mb-8">
                 Schreib uns direkt per WhatsApp – schnell, einfach und unverbindlich.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
-                <Button size="lg" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mb-4">
+                <Button size="default" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
                   <a
                     href={`https://wa.me/${stefanNumber}?text=${whatsAppMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-4 h-4 mr-1.5" />
                     Stefan per WhatsApp
                   </a>
                 </Button>
-                <Button size="lg" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
+                <Button size="default" className="bg-[#25D366] hover:bg-[#1da851] text-white" asChild>
                   <a
                     href={`https://wa.me/${kevinNumber}?text=${whatsAppMessage}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <MessageCircle className="w-5 h-5 mr-2" />
+                    <MessageCircle className="w-4 h-4 mr-1.5" />
                     Kevin per WhatsApp
                   </a>
                 </Button>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <CallDialog>
-                  <Phone className="w-5 h-5 mr-2" />
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <CallDialog size="default">
+                  <Phone className="w-4 h-4 mr-1.5" />
                   Jetzt kostenlos anrufen
                 </CallDialog>
-                <Button size="lg" variant="outline" asChild>
+                <Button size="default" variant="outline" asChild>
                   <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`}>
-                    <Mail className="w-5 h-5 mr-2" />
+                    <Mail className="w-4 h-4 mr-1.5" />
                     E-Mail schreiben
                   </a>
                 </Button>

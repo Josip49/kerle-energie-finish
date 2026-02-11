@@ -49,27 +49,27 @@ const Hero = () => {
           </p>
 
           {/* Free Consultation Badge */}
-          <div className="inline-block px-4 md:px-6 py-2 md:py-3 rounded-xl bg-primary text-primary-foreground font-semibold mb-8 md:mb-10 text-sm md:text-base">
+          <div className="inline-block px-3 md:px-5 py-1.5 md:py-2 rounded-lg bg-primary text-primary-foreground font-semibold mb-6 md:mb-8 text-xs md:text-sm">
             ✓ 100% Kostenlose Telefonische Erstberatung
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-4 sm:px-0">
-            <ContactFormDialog className="hero-cta-primary">
-              <FileText className="w-5 h-5 mr-2" />
+          <div className="flex flex-col sm:flex-row gap-2 md:gap-3 justify-center px-4 sm:px-0">
+            <ContactFormDialog className="hero-cta-primary text-sm">
+              <FileText className="w-4 h-4 mr-1.5" />
               Angebot sichern
             </ContactFormDialog>
-            <CallDialog className="border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-foreground" variant="outline">
-              <Phone className="w-5 h-5 mr-2" />
+            <CallDialog className="border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-foreground text-sm" variant="outline" size="default">
+              <Phone className="w-4 h-4 mr-1.5" />
               Jetzt kostenlos anrufen
             </CallDialog>
           </div>
 
           {/* Förderungen Button */}
-          <div className="mt-4 flex justify-center px-4 sm:px-0">
-            <Button size="lg" variant="outline" className="border-primary/60 bg-primary/10 text-white backdrop-blur-sm hover:bg-primary/20 hover:border-primary" asChild>
+          <div className="mt-3 flex justify-center px-4 sm:px-0">
+            <Button size="default" variant="outline" className="border-primary/60 bg-primary/10 text-white backdrop-blur-sm hover:bg-primary/20 hover:border-primary text-sm" asChild>
               <Link to="/foerderungen">
-                <BadgeEuro className="w-5 h-5 mr-2" />
+                <BadgeEuro className="w-4 h-4 mr-1.5" />
                 Förderungen im Überblick
               </Link>
             </Button>
