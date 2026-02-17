@@ -16,9 +16,9 @@ const Index = () => {
       <Header />
       <Hero />
       <ThreeStepPlan />
-      <Benefits />
-      <ServiceAreas />
       <Services />
+      <ServiceAreas />
+      <Benefits />
       <FAQ />
       <Contact />
       <Location />

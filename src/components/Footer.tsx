@@ -1,31 +1,25 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail } from "lucide-react";
-import logo from "@/assets/logo-kerle.jpeg";
-import certGih from "@/assets/cert-gih-bayern.jpeg";
-import certEee from "@/assets/cert-energieeffizienz.jpeg";
-
-import { StefanKerling, KevinLeuschner, KerLeBrand } from "@/components/StyledName";
+import { Mail } from "lucide-react";
+import senovateLogo from "@/assets/senovate-logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const emailSubject = encodeURIComponent("Kundenanfrage (Grund)");
 
   return (
     <footer className="footer-section">
       <div className="container mx-auto px-4 py-10 md:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-8">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Link to="/" className="inline-block mb-4">
-              <img
-                src={logo}
-                alt="KerLe Energieberatung"
-                className="h-10 w-auto"
-              />
+            <Link to="/" className="inline-flex items-center gap-2 mb-4">
+              <img src={senovateLogo} alt="Senovate" className="h-8 w-auto" />
+              <span className="text-base font-bold tracking-tight text-foreground" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>
+                Senovate
+              </span>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Energieberatung. Nur besser.<br />
-              BAFA-zertifizierte Energie-Effizienz-Experten.
+              Webdesign & Entwicklung.<br />
+              Modern, schnell, zuverlässig.
             </p>
           </div>
 
@@ -46,42 +40,10 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Kontakt</h4>
             <ul className="space-y-1.5 md:space-y-2 text-sm">
               <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <span><StefanKerling />: <a href="tel:015140368889" className="hover:text-primary transition-colors">0151 40368889</a></span>
-              </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
-                <Phone className="w-4 h-4 flex-shrink-0" />
-                <span><KevinLeuschner />: <a href="tel:01623598287" className="hover:text-primary transition-colors">0162 3598287</a></span>
-              </li>
-              <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`} className="hover:text-primary transition-colors break-all">kerle@rothsee-energieberatung.de</a>
+                <a href="mailto:hello@ihre-agentur.de" className="hover:text-primary transition-colors">hello@ihre-agentur.de</a>
               </li>
             </ul>
-          </div>
-
-          {/* Certificates */}
-          <div className="col-span-2 md:col-span-1">
-            <h4 className="font-semibold text-foreground mb-3 md:mb-4 text-sm md:text-base">Zertifizierungen</h4>
-            <div className="flex flex-col items-start gap-3">
-              <a 
-                href="https://www.energie-effizienz-experten.de" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <img
-                  src={certEee}
-                  alt="Energieeffizienz Experten für Förderprogramme des Bundes"
-                  className="h-10 md:h-12 w-auto max-w-[180px] object-contain"
-                />
-              </a>
-              <img
-                src={certGih}
-                alt="GIH Bayern - Interessenvertretung für Energieberatende"
-                className="h-10 md:h-12 w-auto max-w-[180px] object-contain"
-              />
-            </div>
           </div>
         </div>
 
@@ -89,7 +51,7 @@ const Footer = () => {
         <div className="pt-6 md:pt-8 border-t border-border/50 flex flex-col items-center gap-4 md:gap-6">
           <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6 text-xs md:text-sm">
             <p className="text-muted-foreground text-center">
-              © {currentYear} <KerLeBrand /> Energieberatung. Alle Rechte vorbehalten.
+              © {currentYear} Ihre Agentur. Alle Rechte vorbehalten.
             </p>
             <div className="flex items-center gap-4 md:gap-6">
               <Link to="/impressum" className="text-muted-foreground hover:text-primary transition-colors">
@@ -100,11 +62,11 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Senovate Credit - Centered */}
-          <a 
-            href="https://senovate.de" 
-            target="_blank" 
+          <a
+            href="https://senovate.de"
+            target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
           >

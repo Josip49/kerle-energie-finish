@@ -1,12 +1,8 @@
 import { useState } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "@/assets/logo-kerle.jpeg";
-import certGih from "@/assets/cert-gih-bayern.jpeg";
-import certEee from "@/assets/cert-energieeffizienz.jpeg";
-
-import ContactFormDialog from "./ContactFormDialog";
-
+import HueSlider from "./HueSlider";
+import senovateLogo from "@/assets/senovate-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +10,6 @@ const Header = () => {
   const navLinks = [
     { href: "/#ablauf", label: "Ablauf" },
     { href: "/#leistungen", label: "Leistungen" },
-    { href: "/foerderungen", label: "Förderungen" },
     { href: "/#vorteile", label: "Vorteile" },
     { href: "/#faq", label: "FAQ" },
     { href: "/#kontakt", label: "Kontakt" },
@@ -22,15 +17,22 @@ const Header = () => {
 
   return (
     <header className="header-section">
+      {/* Hue Slider Bar */}
+      <div className="border-b border-border/30 bg-muted/30">
+        <div className="container mx-auto px-4 flex items-center justify-between h-9">
+          <span className="text-[11px] text-muted-foreground">Farbschema anpassen:</span>
+          <HueSlider />
+        </div>
+      </div>
+
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center relative z-10" onClick={() => setIsMenuOpen(false)}>
-            <img
-              src={logo}
-              alt="KerLe Energieberatung"
-              className="h-10 lg:h-12 w-auto"
-            />
+          <Link to="/" className="flex items-center gap-2 relative z-10" onClick={() => setIsMenuOpen(false)}>
+            <img src={senovateLogo} alt="Senovate" className="h-8 lg:h-10 w-auto" />
+            <span className="text-lg lg:text-xl font-bold tracking-tight text-foreground" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>
+              Senovate
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,41 +48,14 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button & Certificates - Desktop */}
+          {/* CTA Button - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <ContactFormDialog
-              trigger={
-                <button className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
-                  <FileText className="w-4 h-4" />
-                  Angebot sichern
-                </button>
-              }
-            />
-            <a 
-              href="https://www.energie-effizienz-experten.de" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="hover:opacity-80 transition-opacity"
-            >
-              <img
-                src={certEee}
-                alt="Energieeffizienz Experten"
-                className="h-8 w-auto"
-              />
-            </a>
-            <img
-              src={certGih}
-              alt="GIH Bayern"
-              className="h-10 w-auto"
-            />
             <a
-              href="https://senovate.de"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex flex-col items-center gap-0 text-muted-foreground transition-colors"
+              href="#kontakt"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
             >
-              <span className="text-[9px] leading-tight group-hover:text-[#1a8fd1]">erstellt von</span>
-              <span className="text-sm font-bold tracking-tight group-hover:text-[#1a8fd1] transition-colors" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
+              <Rocket className="w-4 h-4" />
+              Projekt starten
             </a>
           </div>
 
@@ -114,45 +89,21 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            {/* CTA Button - Mobile */}
             <div className="mt-4 pt-4 border-t border-border">
-              <ContactFormDialog
-                trigger={
-                  <button className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300">
-                    <FileText className="w-4 h-4" />
-                    Angebot sichern
-                  </button>
-                }
-              />
-            </div>
-            {/* Certificates - Mobile */}
-            <div className="flex items-center gap-4 mt-4 pt-4 border-t border-border">
-              <a 
-                href="https://www.energie-effizienz-experten.de" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:opacity-80 transition-opacity"
-              >
-                <img
-                  src={certEee}
-                  alt="Energieeffizienz Experten"
-                  className="h-6 w-auto"
-                />
-              </a>
-              <img
-                src={certGih}
-                alt="GIH Bayern"
-                className="h-8 w-auto"
-              />
               <a
-                href="https://senovate.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col items-center gap-0 text-muted-foreground transition-colors"
+                href="#kontakt"
+                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
+                onClick={() => setIsMenuOpen(false)}
               >
-                <span className="text-[9px] leading-tight group-hover:text-[#1a8fd1]">erstellt von</span>
-                <span className="text-sm font-bold tracking-tight group-hover:text-[#1a8fd1] transition-colors" style={{ fontFamily: "'Arial Black', 'Helvetica Neue', Arial, sans-serif" }}>Senovate</span>
+                <Rocket className="w-4 h-4" />
+                Projekt starten
               </a>
+            </div>
+            <div className="mt-4 pt-4 border-t border-border">
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Farbschema:</span>
+                <HueSlider />
+              </div>
             </div>
           </nav>
         )}
