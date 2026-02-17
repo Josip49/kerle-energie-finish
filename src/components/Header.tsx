@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { Menu, X, Rocket } from "lucide-react";
+import { Menu, X, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
-import HueSlider from "./HueSlider";
+import { HueSlider, BgSlider } from "./HueSlider";
 import senovateLogo from "@/assets/senovate-logo.png";
+import DemoButton from "./DemoButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,11 +18,21 @@ const Header = () => {
 
   return (
     <header className="header-section">
-      {/* Hue Slider Bar */}
+      {/* Slider Bar */}
       <div className="border-b border-border/30 bg-muted/30">
-        <div className="container mx-auto px-4 flex items-center justify-between h-9">
-          <span className="text-[11px] text-muted-foreground">Farbschema anpassen:</span>
-          <HueSlider />
+        <div className="container mx-auto px-4 flex items-center justify-between h-9 gap-2">
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-1.5">
+              <span className="text-[10px] text-muted-foreground whitespace-nowrap">Akzent:</span>
+              <HueSlider />
+            </div>
+            <div className="flex items-center gap-1.5">
+              <span className="text-[10px] text-muted-foreground whitespace-nowrap">Hintergrund:</span>
+              <BgSlider />
+            </div>
+          </div>
+          <span className="md:hidden text-[10px] text-muted-foreground">Farben im Menü anpassen ↗</span>
+          <span className="text-[10px] text-muted-foreground/60 hidden md:block">Template-Demo</span>
         </div>
       </div>
 
@@ -50,13 +61,10 @@ const Header = () => {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex items-center gap-4">
-            <a
-              href="#kontakt"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
-            >
-              <Rocket className="w-4 h-4" />
-              Projekt starten
-            </a>
+            <DemoButton className="bg-primary text-primary-foreground gap-2">
+              <FileText className="w-4 h-4" />
+              Angebot sichern
+            </DemoButton>
           </div>
 
           {/* Mobile Menu Button */}
@@ -90,19 +98,20 @@ const Header = () => {
               ))}
             </ul>
             <div className="mt-4 pt-4 border-t border-border">
-              <a
-                href="#kontakt"
-                className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 rounded-lg font-semibold text-sm bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Rocket className="w-4 h-4" />
-                Projekt starten
-              </a>
+              <DemoButton className="w-full bg-primary text-primary-foreground justify-center gap-2 h-12">
+                <FileText className="w-4 h-4" />
+                Angebot sichern
+              </DemoButton>
             </div>
-            <div className="mt-4 pt-4 border-t border-border">
+            {/* Sliders in mobile menu */}
+            <div className="mt-4 pt-4 border-t border-border space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-xs text-muted-foreground">Farbschema:</span>
+                <span className="text-xs text-muted-foreground">Akzentfarbe:</span>
                 <HueSlider />
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Hintergrund:</span>
+                <BgSlider />
               </div>
             </div>
           </nav>

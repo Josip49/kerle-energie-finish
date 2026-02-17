@@ -1,5 +1,5 @@
 import { Phone, Lightbulb, Rocket, FileCheck } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import DemoButton from "@/components/DemoButton";
 
 const steps = [
   {
@@ -68,6 +68,12 @@ const ThreeStepPlan = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mt-auto">
+                  <DemoButton className="w-full bg-primary text-primary-foreground justify-center gap-2">
+                    <Phone className="w-4 h-4" />
+                    Kontaktieren
+                  </DemoButton>
+                </div>
               </div>
               {index < steps.length - 1 && (
                 <div className="hidden md:block step-connector" />
