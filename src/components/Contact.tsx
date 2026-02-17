@@ -1,5 +1,5 @@
 import { Mail, MapPin, Rocket } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import DemoButton from "@/components/DemoButton";
 
 const Contact = () => {
   return (
@@ -16,7 +16,6 @@ const Contact = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="contact-icon">
@@ -24,12 +23,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-foreground mb-1">E-Mail</h3>
-                  <a href="mailto:hello@ihre-agentur.de" className="text-primary hover:underline">
-                    hello@ihre-agentur.de
-                  </a>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    Antwort innerhalb von 24h
-                  </p>
+                  <span className="text-primary">hello@ihre-agentur.de</span>
+                  <p className="text-sm text-muted-foreground mt-1">Antwort innerhalb von 24h</p>
                 </div>
               </div>
 
@@ -47,7 +42,6 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* CTA Block */}
             <div className="contact-cta-block">
               <h3 className="text-2xl font-bold text-foreground mb-4">
                 Projekt starten
@@ -58,12 +52,14 @@ const Contact = () => {
               </p>
 
               <div className="space-y-3">
-                <Button size="default" className="w-full" asChild>
-                  <a href="mailto:hello@ihre-agentur.de">
-                    <Rocket className="w-4 h-4 mr-1.5" />
-                    Projekt anfragen
-                  </a>
-                </Button>
+                <DemoButton className="w-full bg-primary text-primary-foreground justify-center gap-2 h-11">
+                  <Rocket className="w-4 h-4" />
+                  Projekt anfragen
+                </DemoButton>
+                <DemoButton variant="outline" className="w-full justify-center gap-2 h-11">
+                  <Mail className="w-4 h-4" />
+                  E-Mail schreiben
+                </DemoButton>
               </div>
             </div>
           </div>
