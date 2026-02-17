@@ -9,6 +9,7 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 import Foerderungen from "./pages/Foerderungen";
+import CookieConsent from "@/components/CookieConsent";
 
 // Service Pages
 import Energieberatung from "./pages/services/Energieberatung";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <CookieConsent />
     </TooltipProvider>
   </QueryClientProvider>
 );
