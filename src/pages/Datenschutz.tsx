@@ -81,12 +81,21 @@ const Datenschutz = () => {
 
                 <h3 className="text-lg font-semibold text-foreground mt-6">Cookies</h3>
                 <p>
-                  Diese Website verwendet ausschließlich technisch notwendige Cookies, die für den Betrieb
-                  der Seite erforderlich sind (z.&nbsp;B. Session-Cookies). Es werden keine Marketing- oder
-                  Tracking-Cookies eingesetzt.
+                  Diese Website verwendet Cookies. Beim ersten Besuch werden Sie über ein Cookie-Banner
+                  um Ihre Einwilligung gebeten. Sie können dort zwischen folgenden Kategorien wählen:
+                </p>
+                <ul className="list-disc list-inside space-y-1 mt-2">
+                  <li><strong>Notwendige Cookies:</strong> Essenzielle Cookies für die Grundfunktionen der Website (z.&nbsp;B. Speicherung Ihrer Cookie-Einstellungen). Diese sind immer aktiv.</li>
+                  <li><strong>Statistik-Cookies:</strong> Helfen uns zu verstehen, wie Besucher unsere Website nutzen, um das Angebot zu verbessern. Werden nur mit Ihrer Einwilligung gesetzt.</li>
+                  <li><strong>Marketing-Cookies:</strong> Ermöglichen personalisierte Werbung und Analyse über Drittanbieter. Werden nur mit Ihrer Einwilligung gesetzt.</li>
+                </ul>
+                <p className="mt-2">
+                  Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie Ihre Cookie-Einstellungen
+                  im Browser löschen. Beim nächsten Besuch wird das Cookie-Banner erneut angezeigt.
                 </p>
                 <p>
-                  Rechtsgrundlage ist §&nbsp;25 Abs.&nbsp;2 TTDSG i.&nbsp;V.&nbsp;m. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO.
+                  Rechtsgrundlage für notwendige Cookies ist §&nbsp;25 Abs.&nbsp;2 TTDSG i.&nbsp;V.&nbsp;m. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO.
+                  Für Statistik- und Marketing-Cookies ist die Rechtsgrundlage Ihre Einwilligung gemäß §&nbsp;25 Abs.&nbsp;1 TTDSG i.&nbsp;V.&nbsp;m. Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;a DSGVO.
                 </p>
               </section>
 
