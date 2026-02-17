@@ -1,5 +1,4 @@
-import { MapPin } from "lucide-react";
-import { KerLeBrand, StefanKerling, KevinLeuschner } from "@/components/StyledName";
+import { MapPin, Rocket } from "lucide-react";
 
 const Location = () => {
   return (
@@ -10,24 +9,18 @@ const Location = () => {
             Wo Sie uns finden
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Besuchen Sie uns vor Ort oder kontaktieren Sie uns für einen Beratungstermin bei Ihnen.
+            Besuchen Sie uns vor Ort oder arbeiten Sie remote mit uns zusammen.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Map */}
-          <div className="rounded-2xl overflow-hidden shadow-lg border border-border/50 h-[400px]">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2606.8!2d11.1897!3d49.1883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479f5e8c8c8c8c8c%3A0x0!2sLindenallee%2033%2C%2091161%20Hilpoltstein!5e0!3m2!1sde!2sde!4v1700000000000"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="KerLe Energieberatung Standort - Lindenallee 33, 91161 Hilpoltstein"
-              className="w-full h-full"
-            />
+          {/* Map Placeholder */}
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-border/50 h-[400px] bg-muted flex items-center justify-center">
+            <div className="text-center text-muted-foreground">
+              <MapPin className="w-12 h-12 mx-auto mb-3 text-primary/30" />
+              <p className="text-sm">Google Maps Einbettung</p>
+              <p className="text-xs mt-1">Hier erscheint Ihre Karte</p>
+            </div>
           </div>
 
           {/* Address Info */}
@@ -37,12 +30,8 @@ const Location = () => {
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  <KerLeBrand /> Energieberatung
-                </h3>
-                <p className="text-muted-foreground">
-                  Ihre BAFA-zertifizierten Energie-Effizienz-Experten
-                </p>
+                <h3 className="text-xl font-bold text-foreground mb-2">Ihre Agentur</h3>
+                <p className="text-muted-foreground">Ihr Slogan oder Tagline hier</p>
               </div>
             </div>
 
@@ -50,32 +39,16 @@ const Location = () => {
               <div className="border-t border-border/50 pt-4">
                 <h4 className="font-semibold text-foreground mb-2">Adresse</h4>
                 <p className="text-muted-foreground">
-                  Lindenallee 33<br />
-                  91161 Hilpoltstein
-                </p>
-              </div>
-
-              <div className="border-t border-border/50 pt-4">
-                <h4 className="font-semibold text-foreground mb-2">Einsatzgebiet</h4>
-                <p className="text-muted-foreground">
-                  Landkreis Roth, Nürnberger Land, Landkreis Neumarkt i. d. OPf., 
-                  Landkreis Weißenburg-Gunzenhausen und Umgebung
+                  Musterstraße 42<br />
+                  80331 München
                 </p>
               </div>
 
               <div className="border-t border-border/50 pt-4">
                 <h4 className="font-semibold text-foreground mb-2">Kontakt</h4>
                 <div className="space-y-1 text-muted-foreground">
-                  <p><StefanKerling />: <a href="tel:015140368889" className="text-primary hover:underline">0151 40368889</a></p>
-                  <p><KevinLeuschner />: <a href="tel:01623598287" className="text-primary hover:underline">0162 3598287</a></p>
-                  <p>
-                    <a 
-                      href="mailto:kerle@rothsee-energieberatung.de" 
-                      className="text-primary hover:underline"
-                    >
-                      kerle@rothsee-energieberatung.de
-                    </a>
-                  </p>
+                  <p>Telefon: <a href="tel:+4989123456" className="text-primary hover:underline">+49 89 123 456</a></p>
+                  <p>E-Mail: <a href="mailto:hello@ihre-agentur.de" className="text-primary hover:underline">hello@ihre-agentur.de</a></p>
                 </div>
               </div>
             </div>

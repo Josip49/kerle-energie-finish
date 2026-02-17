@@ -1,6 +1,5 @@
-import { Phone, Mail, FileCheck, Calculator, ClipboardCheck } from "lucide-react";
+import { Phone, Lightbulb, Rocket, FileCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import CallDialog from "@/components/CallDialog";
 
 const steps = [
   {
@@ -9,47 +8,45 @@ const steps = [
     title: "Erstgespräch",
     subtitle: "Kostenlos & unverbindlich",
     outcomes: [
-      "Ihre Situation verstehen wir gemeinsam",
-      "Erste Einschätzung zu Fördermöglichkeiten",
-      "Klärung Ihrer Ziele und Wünsche"
-    ]
+      "Ihre Wünsche und Ziele verstehen",
+      "Erste Einschätzung zu Möglichkeiten",
+      "Klärung von Zeitrahmen & Budget",
+    ],
   },
   {
     number: "02",
-    icon: Calculator,
-    title: "Analyse & Planung",
-    subtitle: "Bearbeitung innerhalb von 7 Tagen",
+    icon: Lightbulb,
+    title: "Konzept & Design",
+    subtitle: "Individuell auf Sie zugeschnitten",
     outcomes: [
-      "Vor-Ort-Begehung Ihres Gebäudes",
-      "Detaillierte Wirtschaftlichkeitsberechnung",
-      "Individueller Sanierungsfahrplan (iSFP)"
-    ]
+      "Wireframes und Designentwürfe",
+      "Technische Planung & Architektur",
+      "Feedbackrunden bis zur Freigabe",
+    ],
   },
   {
     number: "03",
-    icon: ClipboardCheck,
-    title: "Umsetzung & Förderung",
-    subtitle: "Wir begleiten Sie",
+    icon: Rocket,
+    title: "Umsetzung & Launch",
+    subtitle: "Wir liefern Ergebnisse",
     outcomes: [
-      "BAFA/BEG Förderanträge vollständig betreut",
-      "Koordination mit Handwerkern",
-      "Baubegleitung auf Wunsch"
-    ]
-  }
+      "Entwicklung mit modernsten Technologien",
+      "Qualitätssicherung und Testing",
+      "Go-Live und fortlaufender Support",
+    ],
+  },
 ];
 
 const ThreeStepPlan = () => {
-  const emailSubject = encodeURIComponent("Kundenanfrage (Grund)");
-
   return (
     <section id="ablauf" className="py-16 md:py-20 lg:py-32 section-warm">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            In 3 Schritten zu Ihrer Energieberatung
+            In 3 Schritten zu Ihrem Projekt
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Unkompliziert, transparent und immer mit Blick auf Ihren Vorteil.
+            Unkompliziert, transparent und immer mit Blick auf Ihr Ergebnis.
           </p>
         </div>
 
@@ -57,23 +54,12 @@ const ThreeStepPlan = () => {
           {steps.map((step, index) => (
             <div key={index} className="step-card group">
               <div className="step-card-inner">
-                {/* Step Number */}
                 <div className="step-number">{step.number}</div>
-
-                {/* Icon */}
                 <div className="step-icon">
                   <step.icon className="w-8 h-8" />
                 </div>
-
-                {/* Content */}
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-sm text-primary font-medium mb-4">
-                  {step.subtitle}
-                </p>
-
-                {/* Outcomes */}
+                <h3 className="text-xl font-bold text-foreground mb-2">{step.title}</h3>
+                <p className="text-sm text-primary font-medium mb-4">{step.subtitle}</p>
                 <ul className="space-y-2 mb-6">
                   {step.outcomes.map((outcome, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
@@ -82,25 +68,9 @@ const ThreeStepPlan = () => {
                     </li>
                   ))}
                 </ul>
-
-                {/* CTAs */}
-                <div className="flex flex-col gap-2 mt-auto">
-                  <CallDialog size="sm" className="w-full">
-                    <Phone className="w-4 h-4 mr-2" />
-                    Anrufen
-                  </CallDialog>
-                  <Button size="sm" variant="outline" className="w-full" asChild>
-                    <a href={`mailto:kerle@rothsee-energieberatung.de?subject=${emailSubject}`}>
-                      <Mail className="w-4 h-4 mr-2" />
-                      E-Mail
-                    </a>
-                  </Button>
-                </div>
               </div>
-
-              {/* Connector Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block step-connector"></div>
+                <div className="hidden md:block step-connector" />
               )}
             </div>
           ))}

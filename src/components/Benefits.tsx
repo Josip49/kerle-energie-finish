@@ -1,36 +1,36 @@
 import { Shield, Clock, Euro, Award, HeartHandshake, Leaf } from "lucide-react";
-import { KerLeBrand } from "@/components/StyledName";
+
 const benefits = [
   {
     icon: Award,
-    title: "BAFA-zertifiziert",
-    description: "Offiziell gelistete Energie-Effizienz-Experten (EEE) für maximale Förderfähigkeit."
+    title: "Höchste Qualität",
+    description: "Wir liefern Ergebnisse, die höchsten Ansprüchen genügen – pixel-perfekt und performant.",
   },
   {
     icon: Clock,
-    title: "Schnelle Bearbeitung",
-    description: "Ihr Sanierungsfahrplan oder Gutachten innerhalb von 7 Tagen."
+    title: "Schnelle Umsetzung",
+    description: "Von der Idee zum fertigen Produkt in Rekordzeit – ohne Kompromisse bei der Qualität.",
   },
   {
     icon: Euro,
-    title: "Kostenlose Erstberatung",
-    description: "Telefonische Erstberatung ohne Kosten und ohne Verpflichtung."
+    title: "Transparente Preise",
+    description: "Faire Festpreise ohne versteckte Kosten. Sie wissen von Anfang an, was es kostet.",
   },
   {
     icon: HeartHandshake,
     title: "Ehrliche Beratung",
-    description: "Wir sagen auch, wenn sich eine Maßnahme nicht rechnet."
+    description: "Wir empfehlen nur, was wirklich Sinn macht – auch wenn es weniger Aufwand für uns bedeutet.",
   },
   {
     icon: Shield,
-    title: "Fördermittel-Garantie",
-    description: "Wir kennen alle BAFA/BEG Programme und holen das Maximum raus."
+    title: "Zukunftssicher",
+    description: "Moderne Technologien und sauberer Code, der langfristig wartbar und erweiterbar ist.",
   },
   {
     icon: Leaf,
     title: "Nachhaltig gedacht",
-    description: "Lösungen, die langfristig Energie und Kosten sparen."
-  }
+    description: "Performante Lösungen mit minimalem Ressourcenverbrauch – gut für Ihre Nutzer und die Umwelt.",
+  },
 ];
 
 const Benefits = () => {
@@ -39,10 +39,10 @@ const Benefits = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Warum <KerLeBrand />?
+            Warum mit uns arbeiten?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Klarheit statt Bauchgefühl – das ist unser Versprechen an Sie.
+            Qualität, Transparenz und Verlässlichkeit – darauf können Sie bauen.
           </p>
         </div>
 
@@ -52,12 +52,8 @@ const Benefits = () => {
               <div className="benefit-icon">
                 <benefit.icon className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-2">
-                {benefit.title}
-              </h3>
-              <p className="text-muted-foreground text-sm">
-                {benefit.description}
-              </p>
+              <h3 className="text-lg font-semibold text-foreground mb-2">{benefit.title}</h3>
+              <p className="text-muted-foreground text-sm">{benefit.description}</p>
             </div>
           ))}
         </div>
